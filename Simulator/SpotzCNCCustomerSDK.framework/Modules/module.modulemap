@@ -1,6 +1,0 @@
-framework module SpotzCNCCustomerSDK {
-  umbrella header "SpotzCNCCustomerSDK.h"
-
-  export *
-  module * { export * }
-}
