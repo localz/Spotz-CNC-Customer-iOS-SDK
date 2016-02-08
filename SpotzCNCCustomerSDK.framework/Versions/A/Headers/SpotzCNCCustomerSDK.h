@@ -23,13 +23,12 @@ typedef enum {
 @protocol SpotzCNCCustomerSDKManagerDelegate <NSObject>
 - (void)spotzCNCSDKInitSuccessful;
 - (void)spotzCNCSDKInitFailed:(NSError *)error;
-- (void)spotzCNCSDKFailed:(NSError *)error;
+@optional
 - (void)spotzCNCSDKConfirmedCustomerRegistration;
 - (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
 - (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
 - (void)spotzCNCSDKBluetoothStateChanged:(BOOL)enabled;
 - (void)spotzCNCSDKLocationServicesStateChanged:(BOOL)enabled;
-- (void)spotzCNCSDKSetupCompleted;
 @end
 
 @protocol SpotzCNCCustomerSDKManagerDataSource <NSObject>
