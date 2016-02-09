@@ -42,7 +42,7 @@ typedef enum {
 
 // SDK Setup
 + (SpotzCNCCustomerSDK *)shared;
-- (void)setupWithProjectId:(NSString *)projectId spotzProjectKey:(NSString *)spotzProjectKey cncProjectKey:(NSString *)cncProjectKey delegate:(id)delegate dataSource:(id)dataSource options:(NSDictionary *)options;
++ (void)initWithAppId:(NSString *)appId spotzAppKey:(NSString *)spotzAppKey cncAppKey:(NSString *)cncAppKey delegate:(id)delegate dataSource:(id)dataSource options:(NSDictionary *)options;
 
 // SDK Usage
 - (void) startSpotzCNC;
@@ -55,7 +55,7 @@ typedef enum {
 - (void)registerCustomerWithUsername:(NSString *)email password:(NSString *)password completion:(void(^)(NSError *error))completion;
 - (void)checkLocationAndRetrieveOrdersWithCompletion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
-- (void)checkinOrder:(SpotzCNCOrder *)order completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
+- (void)checkinOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
 - (void)giveFeedbackComment:(NSString *)feedbackComment responsiveness:(NSNumber *)responsiveness friendliness:(NSNumber *)friendliness usefulness:(NSNumber *)usefulness satisfaction:(NSNumber *)satisfaction orderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
 // Push Configuration
