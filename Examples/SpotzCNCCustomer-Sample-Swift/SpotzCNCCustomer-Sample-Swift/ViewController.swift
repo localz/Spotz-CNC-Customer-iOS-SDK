@@ -57,14 +57,16 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         if self.txtEmailAddress.text == "" {return}
         
+        let email = self.txtEmailAddress.text
+        
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        SpotzCNCCustomerSDK.shared().registerCustomerWithEmail(self.txtEmailAddress.text, otherParameters: nil) { (error:NSError!) -> Void in
+        SpotzCNCCustomerSDK.shared().registerCustomerWithEmail(email, otherParameters: nil) { (error:NSError!) -> Void in
             MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             
             if (error == nil) {
                 self.refreshUserDetail()
             } else {
-                print("Failed to register email \(self.txtEmailAddress.text) with error \(error)")
+                print("Failed to register email \(email) with error \(error)")
             }
         }
     }
@@ -83,7 +85,6 @@ class ViewController: UIViewController, UITableViewDataSource {
             } else {
                 print("Failed to get orders with error \(error)")
             }
-            
         }
     }
     
