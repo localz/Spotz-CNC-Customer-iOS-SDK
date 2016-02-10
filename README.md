@@ -72,7 +72,9 @@ Objective-C
 ```
 
 **4. GO! (a few basic methods)**
+
 **4.1 Register a new customer**
+
 Swift
 ```
 let email = "customeremail@localz.com"
