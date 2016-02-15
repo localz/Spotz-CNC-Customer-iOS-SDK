@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
 	s.xcconfig = { 
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)' 
 	}
+	s.source = { :git => 'https://github.com/localz' }
 	s.source_files  = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework', 'SpotzCNCSDK/SpotzCNCCustomerSDK/**/*.{h,m}'
 	s.preserve_paths = 'SpotzCNCCustomerSDK.framework'
 	s.vendored_frameworks = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
