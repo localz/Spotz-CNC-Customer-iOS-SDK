@@ -103,6 +103,37 @@ NSString *email = @"customeremail@localz.com";
 }];
 ```
 
+**4.1.1 Register a new customer (or log them in if already have a profile - provided password is correct)**
+
+Swift
+```
+let username = "customeremail@localz.com"
+let password = "password"
+        
+SpotzCNCCustomerSDK.shared().registerCustomerWithUsername(username, password: password, otherParameters: nil) { (error) -> Void in
+    if (error == nil) {
+        print("Registered (or logged in)!")
+    } else {
+        print("Failed to register username \(username) with error \(error)")
+    }
+}
+```
+
+Objective-C
+```
+NSString *username = @"customeremail@localz.com";
+NSString *password = @"password";
+    
+[[SpotzCNCCustomerSDK shared] registerCustomerWithUsername:username password:password otherParameters:nil completion:^(NSError *error) {
+
+    if (!error) {
+        NSLog(@"Registered (or logged in)!");
+    } else {
+        NSLog(@"Failed to register username %@ with error %@", username, error);
+    }
+}];
+```
+
 **4.2 Get all non-completed orders for a customer**
 
 Swift
