@@ -164,7 +164,37 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
     }
 }];
 ```
+**4.4 Create an order**
+Swift
+```
+let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"001"])
+let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
+let branchId = "100"
 
+SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId, customerId: customerId) { (error) -> Void in
+    if let error = error {
+        print("Failed to create order with error \(error)")
+        return
+    }
+    
+    print("Order created")
+}
+```
+
+Objective-C
+```
+SpotzCNCOrder *order = [SpotzCNCOrder initWithData:@{@"orderNumber":@"000000000", @"name":@"Order ONE", @"selectedPickupId":@"001"}];
+NSString *customerId = [[SpotzCNCCustomerSDK shared] currentCustomer].customerId;
+NSString *branchId = @"100";
+
+[[SpotzCNCCustomerSDK shared] createOrder:order branchId:branchId customerId:customerId completion:^(NSError *error) {
+    if (!error) {
+        NSLog(@"Order created");
+    } else {
+        NSLog(@"Failed to create order with error %@", error);
+    }
+}];
+```
 
 ## Contribution
 
