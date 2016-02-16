@@ -6,7 +6,7 @@
 Just add the following lines to your Podfile:
 ```
 pod 'SpotzCNCCustomerSDK', :git => 'https://github.com/localz/Spotz-CNC-Customer-iOS-SDK.git'
-pod 'SpotzSDK', :git=>'https://github.com/localz/Spotz3-iOS-SDK'
+pod 'SpotzSDK', :git=>'https://github.com/localz/Spotz3-iOS-SDK',:branch=>'3.1.0.7_beta'
 pod 'SpotzPushSDK', :git => 'https://github.com/localz/Spotz-Push-iOS-SDK'
 ```
 
