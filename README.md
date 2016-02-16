@@ -104,6 +104,7 @@ NSString *email = @"customeremail@localz.com";
 ```
 
 **4.2 Get all non-completed orders for a customer**
+
 Swift
 ```
 SpotzCNCCustomerSDK.shared().getCustomerNonCompletedOrdersSpotRecheck(false) { (orders:[AnyObject]!, error:NSError!) -> Void in
@@ -129,6 +130,7 @@ Objective-C
 ```
 
 **4.3 Check-in a customer order**
+
 Swift
 ```
 let order:SpotzCNCOrder! = /*get the selected order from a list*/ as! SpotzCNCOrder
@@ -165,6 +167,7 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
 }];
 ```
 **4.4 Create an order**
+
 Swift
 ```
 let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"001"])
