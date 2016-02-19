@@ -229,7 +229,7 @@ NSString *branchId = @"100";
     }
 }];
 ```
-***4.5 Record Activity
+**4.5 Record Activity**
 
 You can record activity for when the device enters a certain Spot region. You will need to include the SpotzCNCCustomerSDKManagerDelegate and SpotzCNCCustomerSDKManagerDataSource protocols and implement the following methods
 
