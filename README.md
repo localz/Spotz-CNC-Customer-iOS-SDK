@@ -201,7 +201,7 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
 
 Swift
 ```
-let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE"])
+let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"myBranchId"])
 let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
 let branchId = "100"
 
@@ -217,7 +217,7 @@ SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId, customerId: 
 
 Objective-C
 ```
-SpotzCNCOrder *order = [SpotzCNCOrder initWithData:@{@"orderNumber":@"000000000", @"name":@"Order ONE", @"selectedPickupId":@"001"}];
+SpotzCNCOrder *order = [SpotzCNCOrder initWithData:@{@"orderNumber":@"000000000", @"name":@"Order ONE", @"selectedPickupId":@"myBranchId"}];
 NSString *customerId = [[SpotzCNCCustomerSDK shared] currentCustomer].customerId;
 NSString *branchId = @"100";
 
