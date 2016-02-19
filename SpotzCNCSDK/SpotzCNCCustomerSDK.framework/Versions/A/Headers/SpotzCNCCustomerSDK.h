@@ -57,6 +57,8 @@ typedef enum {
 - (void)registerCustomerWithEmail:(NSString *)email otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
 - (void)registerCustomerWithUsername:(NSString *)email password:(NSString *)password otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
 - (void)loginCustomerWithUsername:(NSString *)email password:(NSString *)password completion:(void(^)(NSError *error))completion;
+- (void)logoutCustomerWithSuccess:(void(^)())success failure:(void(^)(NSError *error))failure;
+
 - (void)checkLocationAndRetrieveOrdersWithCompletion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)checkinOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
@@ -77,7 +79,7 @@ typedef enum {
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
 - (BOOL)isTimeToNotifyForOrder:(SpotzCNCOrder *)order;
 
-- (void)deregisterCustomer;
+
 
 - (NSString *)feedbackRequired;
 

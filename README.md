@@ -201,7 +201,7 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
 
 Swift
 ```
-let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"001"])
+let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE"])
 let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
 let branchId = "100"
 
