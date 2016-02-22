@@ -202,10 +202,11 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
 Swift
 ```
 let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"myBranchId"])
-let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
 let branchId = "100"
 
-SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId, customerId: customerId) { (error) -> Void in
+// Creates an order - Ensure customer is registered (and logged in) before calling this method.
+
+SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId) { (error) -> Void in
     if let error = error {
         print("Failed to create order with error \(error)")
         return
@@ -215,11 +216,9 @@ SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId, customerId: 
 }
 ...
 
-// To delete an order
+// To delete an order. Ensure customer is registered (and logged in) before calling this method.
 
-let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
-
-SpotzCNCCustomerSDK.shared().deleteOrder("10000000", customerId: customerId) { (error) -> Void in
+SpotzCNCCustomerSDK.shared().deleteOrder("10000000") { (error) -> Void in
     if let error = error {
         print("Failed to delete order with error \(error)")
         return
@@ -233,10 +232,11 @@ SpotzCNCCustomerSDK.shared().deleteOrder("10000000", customerId: customerId) { (
 Objective-C
 ```
 SpotzCNCOrder *order = [SpotzCNCOrder initWithData:@{@"orderNumber":@"000000000", @"name":@"Order ONE", @"selectedPickupId":@"myBranchId"}];
-NSString *customerId = [[SpotzCNCCustomerSDK shared] currentCustomer].customerId;
 NSString *branchId = @"100";
 
-[[SpotzCNCCustomerSDK shared] createOrder:order branchId:branchId customerId:customerId completion:^(NSError *error) {
+// Creates an order - Ensure customer is registered (and logged in) before calling this method.
+
+[[SpotzCNCCustomerSDK shared] createOrder:order branchId:branchId completion:^(NSError *error) {
     if (!error) {
         NSLog(@"Order created");
     } else {
@@ -245,11 +245,9 @@ NSString *branchId = @"100";
 }];
 ...
 
-// To  delete an order
+// To delete an order. Ensure customer is registered (and logged in) before calling this method.
 
-NSString *customerId = [[SpotzCNCCustomerSDK shared] currentCustomer].customerId;
-
-[[SpotzCNCCustomerSDK shared] deleteOrder:@"10000000" customerId:customerId completion:^(NSError *error) {
+[[SpotzCNCCustomerSDK shared] deleteOrder:@"10000000" completion:^(NSError *error) {
     if (!error) {
         NSLog(@"Order deleted");
     } else {
