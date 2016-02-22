@@ -63,8 +63,8 @@ typedef enum {
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)checkinOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
 - (void)giveFeedbackComment:(NSString *)feedbackComment responsiveness:(NSNumber *)responsiveness friendliness:(NSNumber *)friendliness usefulness:(NSNumber *)usefulness satisfaction:(NSNumber *)satisfaction orderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
-- (void)createOrder:(SpotzCNCOrder *)order branchId:(NSString *)branchId customerId:(NSString *)customerId completion:(void(^)(NSError *error))completion;
-- (void)deleteOrder:(NSString *)orderNumber customerId:(NSString *)customerId completion:(void(^)(NSError *error))completion;
+- (void)createOrder:(SpotzCNCOrder *)order branchId:(NSString *)branchId completion:(void(^)(NSError *error))completion;
+- (void)deleteOrderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
 // Push Configuration
 - (void)applicationDidRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
