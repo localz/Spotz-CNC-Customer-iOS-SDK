@@ -197,7 +197,7 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
     }
 }];
 ```
-**4.4 Create an order**
+**4.4 Create/Delete an order**
 
 Swift
 ```
@@ -213,6 +213,21 @@ SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId, customerId: 
     
     print("Order created")
 }
+...
+
+// To delete an order
+
+let customerId = SpotzCNCCustomerSDK.shared().currentCustomer().customerId
+
+SpotzCNCCustomerSDK.shared().deleteOrder("10000000", customerId: customerId) { (error) -> Void in
+    if let error = error {
+        print("Failed to delete order with error \(error)")
+        return
+    }
+    
+    print("Order deleted")
+}
+
 ```
 
 Objective-C
@@ -226,6 +241,19 @@ NSString *branchId = @"100";
         NSLog(@"Order created");
     } else {
         NSLog(@"Failed to create order with error %@", error);
+    }
+}];
+...
+
+// To  delete an order
+
+NSString *customerId = [[SpotzCNCCustomerSDK shared] currentCustomer].customerId;
+
+[[SpotzCNCCustomerSDK shared] deleteOrder:@"10000000" customerId:customerId completion:^(NSError *error) {
+    if (!error) {
+        NSLog(@"Order deleted");
+    } else {
+        NSLog(@"Failed to delete order with error %@", error);
     }
 }];
 ```
