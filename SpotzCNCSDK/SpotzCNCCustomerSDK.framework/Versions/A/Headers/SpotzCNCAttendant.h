@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SpotzCNCCustomer : NSObject<NSCoding>
-@property (nonatomic, readonly, strong) NSString *customerId;
-@property (nonatomic, readonly, strong) NSString *title;
+@interface SpotzCNCAttendant : NSObject<NSCoding>
 @property (nonatomic, readonly, strong) NSString *firstName;
 @property (nonatomic, readonly, strong) NSString *lastName;
-@property (nonatomic, readonly, strong) NSString *username;
-@property (nonatomic, readwrite) BOOL isVerified;
+@property (nonatomic, readonly, strong) NSString *avatarUrl;
 
-- (SpotzCNCCustomer *)initWithData:(NSDictionary *)data username:(NSString *)username;
+- (SpotzCNCAttendant *)initWithData:(NSDictionary *)data;
 
 - (void)encodeWithCoder:(NSCoder *)encoder;
 - (id)initWithCoder:(NSCoder *)decoder;

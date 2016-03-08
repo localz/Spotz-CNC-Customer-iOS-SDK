@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SpotzCNCLocationStorePickup.h"
 #import "SpotzCNCLocationStore.h"
+#import "SpotzCNCAttendant.h"
 
 typedef enum {
     SpotzCNCOrderStatusCompleted = 1,
@@ -29,6 +30,7 @@ typedef enum {
 @property (nonatomic, readonly, strong) NSNumber *totalItems;
 @property (nonatomic, readonly, strong) NSDictionary *specific;
 @property (nonatomic, readonly, strong) SpotzCNCLocationStore *store;
+@property (nonatomic, readonly, strong) SpotzCNCAttendant *attendant;
 
 - (SpotzCNCOrder *)initWithData:(NSDictionary *)data;
 - (SpotzCNCOrder *)initWithOrderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)amount pickupStart:(NSDate *)pickupStart pickupDate:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific;
