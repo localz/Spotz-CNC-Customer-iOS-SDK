@@ -13,6 +13,7 @@
 @interface ViewController () <UITableViewDataSource>
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, weak) IBOutlet UITextField *txtEmailAddress;
+@property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (nonatomic, weak) IBOutlet UILabel *lblLoggedInUser;
 @property (nonatomic, weak) IBOutlet UIButton *btnCheckInOrder;
 @property (nonatomic, weak) IBOutlet UIButton *btnGetOrders;
@@ -64,15 +65,29 @@
     
     [self.txtEmailAddress resignFirstResponder];
     NSString *email = self.txtEmailAddress.text;
+    NSString *password = self.txtPassword.text;
     
     [MBProgressHUD showHUDAddedTo:self.view animated:true];
-    [[SpotzCNCCustomerSDK shared] registerCustomerWithEmail:email otherParameters:nil completion:^(NSError *error) {
+    
+    [[SpotzCNCCustomerSDK shared] registerCustomerWithUsername:email password:password otherParameters:nil completion:^(NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:true];
         
         if (!error) {
             [self refreshUserDetails];
         } else {
             NSLog(@"Failed to register email %@ with error %@", email, error);
+            if(error.code == 2)
+            {
+                [[SpotzCNCCustomerSDK shared] loginCustomerWithUsername:email password:password completion:^(NSError *error) {
+                    if(!error)
+                    {
+                        [self refreshUserDetails];
+                    }
+                    else {
+                        NSLog(@"Can't login");
+                    }
+                }];
+            }
         }
     }];
 }
@@ -82,7 +97,7 @@
     [self.txtEmailAddress resignFirstResponder];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:true];
-    [[SpotzCNCCustomerSDK shared] getCustomerNonCompletedOrdersSpotRecheck:false completion:^(NSArray *orders, NSError *error) {
+    [[SpotzCNCCustomerSDK shared] getCustomerNonCompletedOrdersSpotRecheck:true completion:^(NSArray *orders, NSError *error) {
         [MBProgressHUD hideAllHUDsForView:self.view animated:true];
         
         if (!error) {

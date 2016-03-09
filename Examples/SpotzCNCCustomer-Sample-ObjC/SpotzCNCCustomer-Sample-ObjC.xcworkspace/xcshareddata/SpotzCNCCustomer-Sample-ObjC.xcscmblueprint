@@ -1,4 +1,5 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "ECF6FF2FE40ECA03ACE2C820703A87F976E9376B",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
@@ -8,20 +9,20 @@
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "99A3A5F3-5373-4A22-8D18-D932D8035442",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
-    "ECF6FF2FE40ECA03ACE2C820703A87F976E9376B" : "..",
-    "2B3B3C9685226688997D6237DC0A1107420C45B0" : "..\/..\/spotz-cnc-client-sdk-ios"
+    "ECF6FF2FE40ECA03ACE2C820703A87F976E9376B" : "Spotz-CNC-Customer-iOS-SDK\/",
+    "2B3B3C9685226688997D6237DC0A1107420C45B0" : "spotz-cnc-client-sdk-ios-CUSTOMER\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "SpotzCNCCustomer-Sample-ObjC",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
-  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SpotzCNCCustomer-Sample-ObjC.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Examples\/SpotzCNCCustomer-Sample-ObjC\/SpotzCNCCustomer-Sample-ObjC.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/localzteam\/spotz-cnc-client-sdk-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "bitbucket.org:localzteam\/spotz-cnc-client-sdk-ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B3B3C9685226688997D6237DC0A1107420C45B0"
     },
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/localz\/Spotz-CNC-Customer-iOS-SDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:localz\/Spotz-CNC-Customer-iOS-SDK.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ECF6FF2FE40ECA03ACE2C820703A87F976E9376B"
     }

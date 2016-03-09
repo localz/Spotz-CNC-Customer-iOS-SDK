@@ -14,13 +14,14 @@ class ViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var lblLoggedInUser: UILabel!
     @IBOutlet weak var btnCheckInOrder: UIButton!
     @IBOutlet weak var btnGetOrders: UIButton!
+    @IBOutlet weak var txtPassword: UITextField!
     
     var orders: NSMutableArray! = NSMutableArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.refreshUserDetail()
+//        self.refreshUserDetail()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,17 +59,54 @@ class ViewController: UIViewController, UITableViewDataSource {
         if self.txtEmailAddress.text == "" {return}
         
         let email = self.txtEmailAddress.text
+        let password = self.txtPassword.text
         
         MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        SpotzCNCCustomerSDK.shared().registerCustomerWithEmail(email, otherParameters: nil) { (error:NSError!) -> Void in
+        
+        SpotzCNCCustomerSDK.shared().registerCustomerWithUsername(email, password: password, otherParameters: nil) { (error) -> Void in
             MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
             
-            if (error == nil) {
+            if let error = error {
+                
+                let userInfo = error.userInfo["JSONResponseSerializerWithDataKey"] as? [String : AnyObject]
+                
+                if let userInfo = userInfo, code = userInfo["code"] as? String where code == "CC-409"
+                {
+                    SpotzCNCCustomerSDK.shared().loginCustomerWithUsername(email, password: password, completion: { (error) -> Void in
+                        if (error == nil) {
+                            
+                            // run this code to optional but to ensure it is called ok
+                            SpotzCNCCustomerSDK.shared().getCustomerNonCompletedOrdersSpotRecheck(false) { (obj, error) -> Void in
+                                
+                                self.refreshUserDetail()
+                            }
+                        } else {
+                            print("Failed to register email \(email) with error \(error)")
+                        }
+                    })
+                }
+                else
+                {
+                    print("Unable to login. Please try again.");
+                }
+            }
+            else
+            {
                 self.refreshUserDetail()
-            } else {
-                print("Failed to register email \(email) with error \(error)")
             }
         }
+        
+//        SpotzCNCCustomerSDK.shared().loginCustomerWithUsername(email, password: password) { (error:NSError!) -> Void in
+//            MBProgressHUD.hideAllHUDsForView(self.view, animated: true)
+//            
+//            self.btnGetOrdersTapped(nil);
+//            
+//            if (error == nil) {
+//                self.refreshUserDetail()
+//            } else {
+//                print("Failed to register email \(email) with error \(error)")
+//            }
+//        }
     }
     
     @IBAction func btnGetOrdersTapped(sender: AnyObject?) {

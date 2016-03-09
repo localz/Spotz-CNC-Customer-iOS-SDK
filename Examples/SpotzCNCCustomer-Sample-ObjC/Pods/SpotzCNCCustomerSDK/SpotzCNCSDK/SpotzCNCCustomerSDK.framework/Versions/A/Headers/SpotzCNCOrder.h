@@ -31,6 +31,7 @@ typedef enum {
 @property (nonatomic, readonly, strong) SpotzCNCLocationStore *store;
 
 - (SpotzCNCOrder *)initWithData:(NSDictionary *)data;
+- (SpotzCNCOrder *)initWithOrderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)amount pickupStart:(NSDate *)pickupStart pickupDate:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific;
 - (BOOL) isWithinPickupWindow;
 - (BOOL) isTimeToNotify;
 @end

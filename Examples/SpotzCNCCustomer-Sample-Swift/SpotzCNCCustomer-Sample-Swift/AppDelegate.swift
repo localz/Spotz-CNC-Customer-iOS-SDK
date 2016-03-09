@@ -17,10 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SpotzCNCCustomerSDKManage
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        MBProgressHUD.showHUDAddedTo(self.window?.rootViewController?.view, animated: true)
-        
         SpotzCNCCustomerSDK.initWithAppId("<Enter your spotz app ID here>", spotzAppKey: "<Enter your spotz client key here>", cncAppKey: "<Enter your cnc client key here>", delegate: self, dataSource: self, options: nil)
-        
+
         return true
     }
 

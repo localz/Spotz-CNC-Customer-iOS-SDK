@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '47223EBB1613E88F1F6C0198'
+               BlueprintIdentifier = 'ABDA9066CCEE9A13010A7C01257236C4'
                BlueprintName = 'SpotzCNCCustomerSDK'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libSpotzCNCCustomerSDK.a'>
