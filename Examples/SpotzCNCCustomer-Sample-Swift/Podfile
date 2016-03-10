@@ -1,14 +1,15 @@
 platform :ios, '8.0'
 
 source 'https://github.com/CocoaPods/Specs.git'
+
 xcodeproj 'SpotzCNCCustomer-Sample-Swift'
 
 target 'SpotzCNCCustomer-Sample-Swift' do
-#pod 'SpotzCNCCustomerSDK', :path => '../../../spotz-cnc-client-sdk-ios-CUSTOMER' # internal only
+
 pod 'SpotzCNCCustomerSDK', :git => 'git@github.com:localz/Spotz-CNC-Customer-iOS-SDK.git',:branch=>'1.2_beta'
 pod 'SpotzSDK', :git=>'https://github.com/localz/Spotz3-iOS-SDK'
 pod 'SpotzPushSDK', :git =>'https://github.com/localz/Spotz-Push-iOS-SDK'
-
 pod 'MBProgressHUD'
+
 end
 

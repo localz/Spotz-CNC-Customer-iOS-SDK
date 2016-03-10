@@ -22,9 +22,7 @@
     
     [MBProgressHUD showHUDAddedTo:self.window.rootViewController.view animated:true];
     
-//    [SpotzCNCCustomerSDK initWithAppId:@"<Enter your spotz app ID here>" spotzAppKey:@"<Enter your spotz client key here>" cncAppKey:@"<Enter your cnc client key here>" delegate:self dataSource:self options:nil];
-    
-    [SpotzCNCCustomerSDK initWithAppId:@"pHekL3teP73ydSj8syEGK8K7i0b5Pd48GBfv6000" spotzAppKey:@"RbCyyI8uM50QDuBNWSSSxDRRvwMKFWzs1vdkL5vl" cncAppKey:@"GtT4rHKuGHkNnyT8Frs7j7wetSsCzzDcUgcs4c1u" delegate:self dataSource:self options:@{@"env":@"dev"}];
+    [SpotzCNCCustomerSDK initWithAppId:@"<Enter your spotz app ID here>" spotzAppKey:@"<Enter your spotz client key here>" cncAppKey:@"<Enter your cnc client key here>" delegate:self dataSource:self options:nil];
     
     return YES;
 }
