@@ -26,7 +26,7 @@ typedef enum {
 - (void)spotzCNCSDKInitSuccessful;
 - (void)spotzCNCSDKInitFailed:(NSError *)error;
 @optional
-- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot;
+- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot order:(SpotzCNCOrder *)order;
 - (void)spotzCNCSDKConfirmedCustomerRegistration;
 - (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
 - (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
