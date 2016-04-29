@@ -7,16 +7,16 @@ Pod::Spec.new do |s|
 			Copyright 2016 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.3.0'
+	s.version = '1.3.1'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
-	s.author = { 
-		'Localz Pty Ltd' => 'info@localz.com' 
+	s.author = {
+		'Localz Pty Ltd' => 'info@localz.com'
 	}
 	s.requires_arc = true
 	s.ios.deployment_target = '8.0'
-	s.xcconfig = { 
-		'FRAMEWORK_SERCH_PATHS' => '$(inherited)' 
+	s.xcconfig = {
+		'FRAMEWORK_SERCH_PATHS' => '$(inherited)'
 	}
 	s.source = {:git=>'https://github.com/localz'}
 	s.source_files  = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework', 'SpotzCNCSDK/SpotzCNCCustomerSDK/**/*.{h,m}'
