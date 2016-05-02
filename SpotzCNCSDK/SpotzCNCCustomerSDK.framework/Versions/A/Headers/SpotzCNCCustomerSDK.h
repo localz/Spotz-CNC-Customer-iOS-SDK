@@ -16,17 +16,11 @@
 #import <SpotzSDK/SpotzData.h>
 #import <SpotzSDK/SpotzErrorType.h>
 
-typedef enum {
-    SpotzCNCLocationServicesNotDetermined = 0,
-    SpotzCNCLocationServicesOn,
-    SpotzCNCLocationServicesOff
-} SpotzCNCLocationServices;
-
 @protocol SpotzCNCCustomerSDKManagerDelegate <NSObject>
 - (void)spotzCNCSDKInitSuccessful;
 - (void)spotzCNCSDKInitFailed:(NSError *)error;
 @optional
-- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot order:(SpotzCNCOrder *)order;
+- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot activity:(SpotzCNCActivityType)activity order:(SpotzCNCOrder *)order;
 - (void)spotzCNCSDKConfirmedCustomerRegistration;
 - (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
 - (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;

@@ -11,3 +11,14 @@
 extern NSString * const SPOTZ_CNC_NETWORK_NOTIFICATION;
 // Error code for CNC
 extern int const EProjectDisabled;
+
+typedef enum {
+    SpotzCNCLocationServicesNotDetermined = 0,
+    SpotzCNCLocationServicesOn,
+    SpotzCNCLocationServicesOff
+} SpotzCNCLocationServices;
+
+typedef enum {
+    SpotzCNCActivityTypeEnter,
+    SpotzCNCActivityTypeExit
+} SpotzCNCActivityType;
