@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
-	s.platform = :ios,'8.0'
+	s.platform = :ios,'7.0'
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
 			Copyright 2016 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.3.3'
+	s.version = '1.3.4'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
 	s.author = { 
 		'Localz Pty Ltd' => 'info@localz.com' 
 	}
 	s.requires_arc = true
-	s.ios.deployment_target = '8.0'
+	s.ios.deployment_target = '7.0'
 	s.xcconfig = { 
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)' 
 	}
