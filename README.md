@@ -103,7 +103,39 @@ NSString *email = @"customeremail@localz.com";
 }];
 ```
 
+**4.1.1 Register a new customer (or log them in if already have a profile - provided password is correct)**
+
+Swift
+```
+let username = "customeremail@localz.com"
+let password = "password"
+        
+SpotzCNCCustomerSDK.shared().registerCustomerWithUsername(username, password: password, otherParameters: nil) { (error) -> Void in
+    if (error == nil) {
+        print("Registered (or logged in)!")
+    } else {
+        print("Failed to register username \(username) with error \(error)")
+    }
+}
+```
+
+Objective-C
+```
+NSString *username = @"customeremail@localz.com";
+NSString *password = @"password";
+    
+[[SpotzCNCCustomerSDK shared] registerCustomerWithUsername:username password:password otherParameters:nil completion:^(NSError *error) {
+
+    if (!error) {
+        NSLog(@"Registered (or logged in)!");
+    } else {
+        NSLog(@"Failed to register username %@ with error %@", username, error);
+    }
+}];
+```
+
 **4.2 Get all non-completed orders for a customer**
+
 Swift
 ```
 SpotzCNCCustomerSDK.shared().getCustomerNonCompletedOrdersSpotRecheck(false) { (orders:[AnyObject]!, error:NSError!) -> Void in
@@ -129,6 +161,7 @@ Objective-C
 ```
 
 **4.3 Check-in a customer order**
+
 Swift
 ```
 let order:SpotzCNCOrder! = /*get the selected order from a list*/ as! SpotzCNCOrder
@@ -163,6 +196,92 @@ SpotzCNCOrder *order = /*get the selected order from a list*/;
         NSLog(@"Failed to check in order %@ with %@", order.orderNumber, error);
     }
 }];
+```
+**4.4 Create/Delete an order**
+
+Swift
+```
+let order = SpotzCNCOrder(data: ["orderNumber":"000000000", "name":"Order ONE", "selectedPickupId":"myBranchId"])
+let branchId = "100"
+
+// Creates an order - Ensure customer is registered (and logged in) before calling this method.
+
+SpotzCNCCustomerSDK.shared().createOrder(order, branchId: branchId) { (error) -> Void in
+    if let error = error {
+        print("Failed to create order with error \(error)")
+        return
+    }
+    
+    print("Order created")
+}
+...
+
+// To delete an order. Ensure customer is registered (and logged in) before calling this method.
+
+SpotzCNCCustomerSDK.shared().deleteOrderNumber("10000000") { (error) -> Void in
+    if let error = error {
+        print("Failed to delete order with error \(error)")
+        return
+    }
+    
+    print("Order deleted")
+}
+
+```
+
+Objective-C
+```
+SpotzCNCOrder *order = [SpotzCNCOrder initWithData:@{@"orderNumber":@"000000000", @"name":@"Order ONE", @"selectedPickupId":@"myBranchId"}];
+NSString *branchId = @"100";
+
+// Creates an order - Ensure customer is registered (and logged in) before calling this method.
+
+[[SpotzCNCCustomerSDK shared] createOrder:order branchId:branchId completion:^(NSError *error) {
+    if (!error) {
+        NSLog(@"Order created");
+    } else {
+        NSLog(@"Failed to create order with error %@", error);
+    }
+}];
+...
+
+// To delete an order. Ensure customer is registered (and logged in) before calling this method.
+
+[[SpotzCNCCustomerSDK shared] deleteOrderNumber:@"10000000" completion:^(NSError *error) {
+    if (!error) {
+        NSLog(@"Order deleted");
+    } else {
+        NSLog(@"Failed to delete order with error %@", error);
+    }
+}];
+```
+**4.5 Record Activity**
+
+You can record activity for when the device enters a certain Spot region. You will need to include the SpotzCNCCustomerSDKManagerDelegate and SpotzCNCCustomerSDKManagerDataSource protocols and implement the following methods
+
+Objective-C
+```
+- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot {
+    if([spot.name isEqualToString:@"Entrance"])
+    {
+        // record if entrance spot
+        return true;
+    }
+    else
+    {
+        // don't record if not entrance spot
+        return false;
+    }
+}
+```
+
+Optionally, you can pass in additional data that will be accessible via the dashboard API
+
+Objective-C
+```
+- (NSDictionary *)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *)spot {
+    return @{@"isVIP":@"true"};
+}
 ```
 
 

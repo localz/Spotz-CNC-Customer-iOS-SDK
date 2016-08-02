@@ -13,17 +13,14 @@
 #import "SpotzCNCLocationStore.h"
 #import "SpotzCNCCustomerConstants.h"
 #import "SpotzCNCError.h"
-
-typedef enum {
-    SpotzCNCLocationServicesNotDetermined = 0,
-    SpotzCNCLocationServicesOn,
-    SpotzCNCLocationServicesOff
-} SpotzCNCLocationServices;
+#import <SpotzSDK/SpotzData.h>
+#import <SpotzSDK/SpotzErrorType.h>
 
 @protocol SpotzCNCCustomerSDKManagerDelegate <NSObject>
 - (void)spotzCNCSDKInitSuccessful;
 - (void)spotzCNCSDKInitFailed:(NSError *)error;
 @optional
+- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot activity:(SpotzCNCActivityType)activity order:(SpotzCNCOrder *)order;
 - (void)spotzCNCSDKConfirmedCustomerRegistration;
 - (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
 - (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
@@ -35,6 +32,8 @@ typedef enum {
 - (NSString *)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore *)store;
 - (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order;
 @optional
+- (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order error:(NSError *)error;
+- (NSDictionary *)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *)spot;
 - (BOOL)spotzCNCSDKNotificationMessagePresentCheckinOptionsForOrder:(SpotzCNCOrder *)order;
 @end
 
@@ -45,18 +44,35 @@ typedef enum {
 + (void)initWithAppId:(NSString *)appId spotzAppKey:(NSString *)spotzAppKey cncAppKey:(NSString *)cncAppKey delegate:(id)delegate dataSource:(id)dataSource options:(NSDictionary *)options;
 
 // SDK Usage
-- (void) startSpotzCNC;
-- (void) stopSpotzCNC;
+- (void)startSpotzCNC;
+- (void)stopSpotzCNC;
 
 - (SpotzCNCCustomer *)currentCustomer;
 - (void)verifyCustomer;
 - (BOOL)canCheckInOrder:(SpotzCNCOrder *)order;
 - (void)registerCustomerWithEmail:(NSString *)email otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
-- (void)registerCustomerWithUsername:(NSString *)email password:(NSString *)password completion:(void(^)(NSError *error))completion;
+- (void)registerCustomerWithUsername:(NSString *)email password:(NSString *)password otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
+- (void)loginCustomerWithUsername:(NSString *)email password:(NSString *)password completion:(void(^)(NSError *error))completion;
+- (void)logoutCustomerWithSuccess:(void(^)())success failure:(void(^)(NSError *error))failure;
+
 - (void)checkLocationAndRetrieveOrdersWithCompletion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)checkinOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
+- (void)checkinOneOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
 - (void)giveFeedbackComment:(NSString *)feedbackComment responsiveness:(NSNumber *)responsiveness friendliness:(NSNumber *)friendliness usefulness:(NSNumber *)usefulness satisfaction:(NSNumber *)satisfaction orderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
+
+/**
+ * Creates an order with the provided parameters, with allowAutoCheckin and allowCheckinPending defaulted to false
+ */
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+
+/**
+ * Creates an order with the provided parameters
+ */
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+
+- (void)createOrder:(SpotzCNCOrder *)order branchId:(NSString *)branchId completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+- (void)deleteOrderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
 // Push Configuration
 - (void)applicationDidRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
@@ -68,11 +84,11 @@ typedef enum {
 - (void)applicationDidReceiveRemoteNotification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state;
 - (void)applicationDidReceiveRemoteNotification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 - (void)applicationDidReceiveActionWithIdentifier:(NSString *)identifier notification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state completionHandler:(void (^)()) handler;
-
+- (void) applicationPerformFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
 - (BOOL)isTimeToNotifyForOrder:(SpotzCNCOrder *)order;
+- (BOOL)isSpotzCNCStarted;
 
-- (void)deregisterCustomer;
 
 - (NSString *)feedbackRequired;
 
