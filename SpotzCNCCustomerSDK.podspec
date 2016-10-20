@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 			Copyright 2016 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.3.5'
+	s.version = '1.3.6'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
 	s.author = { 
@@ -26,5 +26,5 @@ Pod::Spec.new do |s|
 
 	# Please also include:
 	#s.dependency 'https://github.com/localz/Spotz3-iOS-SDK'
-	#s.dependency 'https://github.com/localz/Spotz-Push-iOS-SDK'
+	#s.dependency 'https://github.com/localz/SpotzPushSDK'
 end
