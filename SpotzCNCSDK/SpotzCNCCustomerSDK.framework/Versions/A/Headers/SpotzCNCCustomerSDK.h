@@ -29,7 +29,7 @@
 @end
 
 @protocol SpotzCNCCustomerSDKManagerDataSource <NSObject>
-- (NSString *)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore *)store;
+- (NSString *)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore *)store order:(SpotzCNCOrder *)order;
 - (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order;
 @optional
 - (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order error:(NSError *)error;

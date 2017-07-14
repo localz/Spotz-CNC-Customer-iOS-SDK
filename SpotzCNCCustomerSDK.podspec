@@ -4,10 +4,10 @@ Pod::Spec.new do |s|
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
-			Copyright 2016 Localz Pty Ltd.
+			Copyright 2017 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.3.6'
+	s.version = '1.3.7'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
 	s.author = { 
