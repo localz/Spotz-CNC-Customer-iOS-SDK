@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
 			Copyright 2017 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.4'
+	s.version = '1.5'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
 	s.author = { 
