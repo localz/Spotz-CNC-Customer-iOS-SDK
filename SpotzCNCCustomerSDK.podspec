@@ -1,20 +1,20 @@
 Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
-	s.platform = :ios,'7.0'
+	s.platform = :ios,'8.0'
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
-			Copyright 2017 Localz Pty Ltd.
+			Copyright 2018 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.8.1.1'
+	s.version = '1.8.1.2'
 	s.summary = 'SpotzCNCCustomerSDK'
 	s.homepage = 'http://www.localz.com'
 	s.author = { 
 		'Localz Pty Ltd' => 'info@localz.com' 
 	}
 	s.requires_arc = true
-	s.ios.deployment_target = '7.0'
+	s.ios.deployment_target = '8.0'
 	s.xcconfig = { 
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)' 
 	}
@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
 	s.frameworks = 'CoreLocation','CoreBluetooth'
 
 	# Please also include:
-	#s.dependency 'https://github.com/localz/Spotz3-iOS-SDK'
-	#s.dependency 'https://github.com/localz/SpotzPushSDK'
+	 # 'https://github.com/localz/Spotz3-iOS-SDK'
+	 # 'https://github.com/localz/SpotzPushSDK'
 end
