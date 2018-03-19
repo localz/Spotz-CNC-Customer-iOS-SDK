@@ -15,7 +15,8 @@ typedef enum {
     SpotzCNCOrderStatusCompleted = 1,
     SpotzCNCOrderStatusNotReady,
     SpotzCNCOrderStatusReady,
-    SpotzCNCOrderStatusNotified
+    SpotzCNCOrderStatusNotified,
+    SpotzCNCOrderStatusAssigned
 } SpotzCNCOrderStatus;
 
 @interface SpotzCNCOrder : NSObject<NSCoding>

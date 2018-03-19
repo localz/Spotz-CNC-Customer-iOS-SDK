@@ -54,7 +54,7 @@
 - (void)registerCustomerWithEmail:(NSString *)email otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
 - (void)registerCustomerWithUsername:(NSString *)email password:(NSString *)password otherParameters:(NSDictionary *)otherParameters completion:(void(^)(NSError *error))completion;
 - (void)loginCustomerWithUsername:(NSString *)email password:(NSString *)password completion:(void(^)(NSError *error))completion;
-- (void)logoutCustomerWithSuccess:(void(^)())success failure:(void(^)(NSError *error))failure;
+- (void)logoutCustomerWithSuccess:(void(^)(void))success failure:(void(^)(NSError *error))failure;
 
 - (void)checkLocationAndRetrieveOrdersWithCompletion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
@@ -65,12 +65,14 @@
 /**
  * Creates an order with the provided parameters, with allowAutoCheckin and allowCheckinPending defaulted to false
  */
-- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber date:(NSDate *)date deliveryName:(NSString *)deliveryName status:(SpotzCNCOrderStatus)status amount:(NSNumber *)amount pickupStartDate:(NSDate *)pickupStartDate pickupEndDate:(NSDate *)pickupEndDate selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)attributes completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion __deprecated_msg("orderAmount is no longer supporting NSString class. Use alternative createOrderWithBranchId: instead.");
 
 /**
  * Creates an order with the provided parameters
  */
-- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber date:(NSDate *)date deliveryName:(NSString *)deliveryName status:(SpotzCNCOrderStatus)status amount:(NSNumber *)amount pickupStartDate:(NSDate *)pickupStartDate pickupEndDate:(NSDate *)pickupEndDate selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)attributes allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
+- (void)createOrderWithBranchId:(NSString *)branchId orderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)orderAmount pickupStart:(NSDate *)pickupStart pickupEnd:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion __deprecated_msg("orderAmount is no longer supporting NSString class. Use alternative createOrderWithBranchId: instead.");
 
 - (void)createOrder:(SpotzCNCOrder *)order branchId:(NSString *)branchId completion:(void(^)(SpotzCNCOrder *order,NSError *error))completion;
 - (void)deleteOrderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
@@ -79,13 +81,13 @@
 - (void)applicationDidRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
 - (void)applicationDidFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
 - (void)applicationDidRegisterUserNotificationSettings:(UIUserNotificationSettings *)userNotificationSettings;
-- (void)applicationHandleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)())completionHandler;
+- (void)applicationHandleActionWithIdentifier:(NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void (^)(void))completionHandler;
 - (void)userNotificationCenterDidReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler;
 
 // Push Usage
 - (void)applicationDidReceiveRemoteNotification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state;
 - (void)applicationDidReceiveRemoteNotification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
-- (void)applicationDidReceiveActionWithIdentifier:(NSString *)identifier notification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state completionHandler:(void (^)()) handler;
+- (void)applicationDidReceiveActionWithIdentifier:(NSString *)identifier notification:(NSDictionary *)userInfo applicationState:(UIApplicationState)state completionHandler:(void (^)(void)) handler;
 - (void)applicationPerformFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler;
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
 - (BOOL)isTimeToNotifyForOrder:(SpotzCNCOrder *)order;
