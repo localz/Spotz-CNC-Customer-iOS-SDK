@@ -19,6 +19,7 @@
 @property (nonatomic, readonly, strong) NSString *branchId;
 @property (nonatomic, readonly, strong) NSString *siteId;
 @property (nonatomic, readonly, strong) NSString *address;
+@property (nonatomic, readonly, strong) NSString *phone;
 @property (nonatomic, readonly, strong) NSDictionary<NSString *,SpotzCNCLocationStorePickup *> *locationPickups;
 @property (nonatomic, readonly, strong) NSString *timezone;
 @property (nonatomic, readonly) BOOL serviceAvailable;
