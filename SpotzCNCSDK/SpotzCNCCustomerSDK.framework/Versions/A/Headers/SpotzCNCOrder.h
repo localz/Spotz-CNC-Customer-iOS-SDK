@@ -34,6 +34,7 @@ typedef enum {
 @property (nonatomic, readonly) BOOL isAllowingAutoCheckinOnSiteEntry;
 @property (nonatomic, readonly, strong) SpotzCNCLocationStore *store;
 @property (nonatomic, readonly, strong) SpotzCNCAttendant *attendant;
+@property (nonatomic, readonly, strong) NSArray *proximityTriggers;
 
 - (SpotzCNCOrder *)initWithData:(NSDictionary *)data;
 - (SpotzCNCOrder *)initWithOrderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)amount pickupStart:(NSDate *)pickupStart pickupDate:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin __deprecated_msg("orderAmount is no longer supporting NSString class. Use alternative initWithOrderNumber: instead.");

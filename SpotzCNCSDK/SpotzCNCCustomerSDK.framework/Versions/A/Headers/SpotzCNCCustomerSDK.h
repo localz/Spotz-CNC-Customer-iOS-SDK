@@ -27,6 +27,8 @@
 - (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
 - (void)spotzCNCSDKBluetoothStateChanged:(BOOL)enabled;
 - (void)spotzCNCSDKLocationServicesStateChanged:(BOOL)enabled;
+- (void)spotzCNCSDKNotificationDidSelectActionAtIndex:(int)index order:(SpotzCNCOrder *)order;
+
 @end
 
 @protocol SpotzCNCCustomerSDKManagerDataSource <NSObject>
@@ -36,6 +38,10 @@
 - (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order error:(NSError *)error;
 - (NSDictionary *)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *)spot;
 - (BOOL)spotzCNCSDKNotificationMessagePresentCheckinOptionsForOrder:(SpotzCNCOrder *)order;
+- (int)spotzCNCSDKNotificationNumberOfActions;
+- (NSString *)spotzCNCSDKNotificationActionTitleForIndex:(int)index;
+
+
 @end
 
 @interface SpotzCNCCustomerSDK : NSObject
@@ -60,6 +66,7 @@
 - (void)getCustomerNonCompletedOrdersSpotRecheck:(BOOL)recheck completion:(void(^)(NSArray *orders, NSError *error))completion;
 - (void)checkinOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
 - (void)checkinOneOrder:(SpotzCNCOrder *)order force:(BOOL)force completion:(void(^)(NSNumber *numOrdersCheckedIn, NSError *error))completion;
+- (void)updateOrderAttribute:(NSString *)attribute forOrder:(SpotzCNCOrder *)order completion:(void(^)(NSError *error))completion;
 - (void)giveFeedbackComment:(NSString *)feedbackComment responsiveness:(NSNumber *)responsiveness friendliness:(NSNumber *)friendliness usefulness:(NSNumber *)usefulness satisfaction:(NSNumber *)satisfaction orderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
 /**
@@ -92,7 +99,7 @@
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
 - (BOOL)isTimeToNotifyForOrder:(SpotzCNCOrder *)order;
 - (BOOL)isSpotzCNCStarted;
-
+- (void)presentLocalNotificationWithRequestId:(NSString *)requestId message:(NSString *)message userInfo:(NSDictionary *)userInfo categoryIdentifier:(NSString *)categoryIdentifier;
 
 - (NSString *)feedbackRequired;
 
