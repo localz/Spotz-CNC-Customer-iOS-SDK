@@ -1,26 +1,44 @@
 Pod::Spec.new do |s|
+
 	s.name	= 'SpotzCNCCustomerSDK'
+	s.summary = 'SpotzCNCCustomerSDK'
+
+	s.version = '1.9.0'
 	s.platform = :ios,'8.0'
+	s.ios.deployment_target = '8.0'
+
+	s.homepage = 'http://www.localz.com'
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
 			Copyright 2018 Localz Pty Ltd.
 			LICENSE
 	}
-	s.version = '1.8.6'
-	s.summary = 'SpotzCNCCustomerSDK'
-	s.homepage = 'http://www.localz.com'
-	s.author = { 
-		'Localz Pty Ltd' => 'info@localz.com' 
-	}
+	s.author = { 'Localz Pty Ltd' => 'info@localz.com' }
+	s.source = { :git => 'https://github.com/localz',
+		 		 :tag => s.version }
+
 	s.requires_arc = true
-	s.ios.deployment_target = '8.0'
-	s.xcconfig = { 
-		'FRAMEWORK_SERCH_PATHS' => '$(inherited)' 
+	s.static_framework = true
+	s.swift_version = '4.2'
+	s.requires_arc = true
+	s.xcconfig = {
+		'FRAMEWORK_SERCH_PATHS' => '$(inherited)',
+		'DEFINES_MODULE' => 'YES',
+		'CLANG_ENABLE_MODULES' => 'YES',
+		#'SWIFT_OBJC_BRIDGING_HEADER' => 'SpotzCNCCustomerSDK/SpotzCNCCustomerSDK-Bridging-Header.h',
+		#'SWIFT_OBJC_INTERFACE_HEADER_NAME' => '$(SWIFT_MODULE_NAME)-Swift.h'
+		'SWIFT_OBJC_INTERFACE_HEADER_NAME' => 'SpotzCNCCustomerSDK-Swift.h'
+		# 'SWIFT_VERSION' => 4.2
 	}
-	s.source = {:git=>'https://github.com/localz'}
-	s.source_files  = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework', 'SpotzCNCSDK/SpotzCNCCustomerSDK/**/*.{h,m}'
-	s.preserve_paths = 'SpotzCNCCustomerSDK.framework'
+	
+	
+	s.source_files  =  'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/*.{swift,h}', 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
+	# s.public_header_files = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/**.{swift,h}'
+	s.module_map = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Modules/module.modulemap'
+	s.module_name = 'SpotzCNCCustomerSDK'
+
+	s.preserve_paths = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/*'
 	s.vendored_frameworks = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
 	s.frameworks = 'CoreLocation','CoreBluetooth'
 

@@ -8,130 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <UserNotifications/UserNotifications.h>
-#import "SpotzCNCCustomer.h"
-#import "SpotzCNCOrder.h"
-#import "SpotzCNCLocationStorePickup.h"
-#import "SpotzCNCLocationStore.h"
-#import "SpotzCNCCustomerConstants.h"
-#import "SpotzCNCError.h"
-#import <SpotzSDK/SpotzData.h>
-#import <SpotzSDK/SpotzErrorType.h>
 
-@protocol SpotzCNCCustomerSDKManagerDelegate <NSObject>
-/**
- * Called when SDK is successfully initialised
- */
-- (void)spotzCNCSDKInitSuccessful;
-
-/**
- * Called when SDK init returns an error
- * @param error Error object returned by the init
- */
-- (void)spotzCNCSDKInitFailed:(NSError *)error;
-@optional
-
-/**
- * Return true to record activity for spot
- * @param spot SpotzData object that was triggered
- * @param activity SpotzCNCActivityType type that was triggered
- * @param order Order object that this event was related to
- * @return Return true to record. Default is false.
- */
-- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot activity:(SpotzCNCActivityType)activity order:(SpotzCNCOrder *)order;
-
-/**
- * Called when SDK receives a customer registration confirmation from the Localz server
- */
-- (void)spotzCNCSDKConfirmedCustomerRegistration;
-
-/**
- * Called when details of non-completed have been updated.
- * @param orders Array of non-completed orders
- */
-- (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
-
-/**
- * Called when order has been completed
- * @param order Order object this event belongs to
- */
-- (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
-
-/**
- * Called when bluetooth state changed. Only relevant when beacon is used in the implementation.
- * @param enabled True if enabled, False if not
- */
-- (void)spotzCNCSDKBluetoothStateChanged:(BOOL)enabled;
-
-/**
- * Called when location services permission state changed.
- * @param enabled True if enabled, False if not
- */
-- (void)spotzCNCSDKLocationServicesStateChanged:(BOOL)enabled;
-
-/**
- * Called when one of the push notification’s actions is selected
- * @param index Index of the action
- * @param order Order object that this action is related to
- */
-- (void)spotzCNCSDKNotificationDidSelectActionAtIndex:(int)index order:(SpotzCNCOrder *)order;
-
-@end
-
-@protocol SpotzCNCCustomerSDKManagerDataSource <NSObject>
-
-/**
- * The delegate to provide custom push notification message for when customer entering a store/site area
- * @param store The store object that customer entered
- * @param order The related order object that was triggered by this event
- * @return Return custom message to be presented in the push notification
- */
-- (NSString *)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore *)store order:(SpotzCNCOrder *)order;
-
-/**
- * The custom message to display when order is checked in while app is in the background.
- * @param order Order object to checkin
- * @return Return custom message to be presented in the push notification
- */
-- (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order;
-@optional
-
-/**
- * The custom message to display when order is cannot be checked in while app is in the background.
- * @param order Order object to checkin
- * @param error Error object containing reason of why order cannot be checked in
- * @return Return custom message to be presented in the push notification. Otherwise default message is displayed.
- */
-- (NSString *)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder *)order error:(NSError *)error;
-
-/**
- * This is called during spot events, e.g. enter/exit Spot. The event information is in the SpotzData object. You can return additional information that will be stored in the event log.
- * @param spot SpotzData object that contains the event information
- * @return List of key:value to be stored on the server as part of the event record. Default is nil.
- */
-- (NSDictionary *)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *)spot;
-
-/**
- * Return true to use the custom category
- * @param order Order object that this category will be presented for
- * @return Return true to enable custom category. Default is false.
- */
-- (BOOL)spotzCNCSDKNotificationMessagePresentCheckinOptionsForOrder:(SpotzCNCOrder *)order;
-
-/**
- * This is called when the CNC SDK is initialised as the SDK needs to set the number of custom actions required for local notifications. This is optional. If not set, the default actions `checkInNow` and `checkInLater` will kick in.
- * @return int value specifying the number of actions
- */
-- (int)spotzCNCSDKNotificationNumberOfActions;
-
-/**
- * This is called when the CNC SDK is initialised as the SDK needs to set the titles for subsequent action for a local notification.
- * This is optional. If not set, default titles set as part of `options` dictionary in CNC initialisation will be used.
- * @param index The button index of a local notification for which the title needs to be set
- * @return String value to be associated with the local notification buttons
- */
-- (NSString *)spotzCNCSDKNotificationActionTitleForIndex:(int)index;
-
-@end
+#import <SpotzCNCCustomerSDK/SpotzCNCProtocol.h>
 
 @interface SpotzCNCCustomerSDK : NSObject
 
@@ -200,7 +78,7 @@
 
 /**
  * Logs user in using a username and password.
- * @param username Username to login
+ * @param email Username/email to login
  * @param password Password to register
  * @param completion Returns error if any, nil if successful
  */
@@ -293,7 +171,7 @@
 /**
  * Deletes order with the given order number
  * @param orderNumber order number to delete
- * @param Completion block which returns error if any
+ * @param completion block which returns error if any
  */
 - (void)deleteOrderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
@@ -330,7 +208,7 @@
  * @param response The user’s response to the notification
  * @param completionHandler The completion block to execute when you have finished processing the user’s response
  */
-- (void)userNotificationCenterDidReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler;
+- (void)userNotificationCenterDidReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler API_AVAILABLE(ios(10.0));
 
 /**
  * Handler for remote notification
@@ -383,13 +261,19 @@
 - (BOOL)isSpotzCNCStarted;
 
 /**
+ *  Present a local notification with customised content
+ *  @param notification The notification object for customising the request id, text, action type, user info, etc
+ */
+- (void)presentLocalNotification:(SpotzCNCNotification *)notification;
+
+/**
  * Presents Local Notification with customised message.
  * @param requestId Unique Id. If non-unique, then the last notification will be overwritten
  * @param message Customised message to be shown to the user
  * @param userInfo Any information to be passed into the local notification. Ex: orderNumber. This is optional
  * @param categoryIdentifier Category identifer required for UNMutableNotificationContent. This can be nil and is optional as this is set already by the SDK. See https://localz.github.io/spotz-cnc-sdk-docs/?objective_c#2-local-notifications for example on how to implement it.
  */
-- (void)presentLocalNotificationWithRequestId:(NSString *)requestId message:(NSString *)message userInfo:(NSDictionary *)userInfo categoryIdentifier:(NSString *)categoryIdentifier;
+- (void)presentLocalNotificationWithRequestId:(NSString *)requestId message:(NSString *)message userInfo:(NSDictionary *)userInfo categoryIdentifier:(NSString *)categoryIdentifier __deprecated_msg("Please use presentLocalNotification: instead");
 
 /**
  * Returns the most recent order for which feedback has been requested by push notification (configured in the Spotz Console).
@@ -400,7 +284,7 @@
 /**
  * @deprecated This method is deprecated and should no longer be used.
  */
-- (NSString *)assetsBaseURLForEnv:(NSString *)env ssl:(BOOL)ssl;
+- (NSString *)assetsBaseURLForEnv:(NSString *)env ssl:(BOOL)ssl __deprecated_msg("This method is deprecated and should no longer be used");
 
 /**
  * Check if the user has given right location permissions.

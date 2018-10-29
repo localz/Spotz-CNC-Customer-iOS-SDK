@@ -74,4 +74,8 @@ typedef enum {
  * @return true if store is open
  */
 - (BOOL) isTimeToNotify;
+
+
+- (NSString *)orderStatusString;
+
 @end

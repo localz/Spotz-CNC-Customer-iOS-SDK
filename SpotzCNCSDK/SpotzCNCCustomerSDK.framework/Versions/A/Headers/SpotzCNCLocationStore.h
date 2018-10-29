@@ -10,8 +10,10 @@
 #import "SpotzCNCLocationStorePickup.h"
 
 @interface SpotzCNCLocationStore : NSObject
-/** @brief ID of the store */
-@property (nonatomic, readonly, strong) NSString *identifier;
+/** @brief Deprecated ID of the store */
+@property (nonatomic, readonly, strong) NSString *identifier __deprecated_msg("identifier is no longer used. Please use locationId as the identifier");
+/** @brief Internal location ID */
+@property (nonatomic, readonly, strong) NSString *locationId;
 /** @brief Name of the Location, for example "Melbourne Store" */
 @property (nonatomic, readonly, strong) NSString *name;
 /** @brief Default Pick up ID of the store, for exampe "CC" */
@@ -24,8 +26,6 @@
 @property (nonatomic, readonly, strong) NSNumber *longitude;
 /** @brief Branch ID of the store (also know as store number) */
 @property (nonatomic, readonly, strong) NSString *branchId;
-/** @brief Internal location ID */
-@property (nonatomic, readonly, strong) NSString *locationId;
 /** @brief Internal site ID */
 @property (nonatomic, readonly, strong) NSString *siteId;
 /** @brief Address of the location */

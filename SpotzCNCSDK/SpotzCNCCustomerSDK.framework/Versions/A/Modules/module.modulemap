@@ -1,0 +1,11 @@
+framework module SpotzCNCCustomerSDK {
+    umbrella header "SpotzCNCCustomerSDK.h"
+
+    export *
+    module * { export * }    
+}
+
+module SpotzCNCCustomerSDK.Swift {
+    header "SpotzCNCCustomerSDK-Swift.h"
+    requires objc
+}
