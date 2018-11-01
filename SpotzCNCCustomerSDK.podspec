@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.9.0'
+	s.version = '1.9.1'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
@@ -26,15 +26,10 @@ Pod::Spec.new do |s|
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)',
 		'DEFINES_MODULE' => 'YES',
 		'CLANG_ENABLE_MODULES' => 'YES',
-		#'SWIFT_OBJC_BRIDGING_HEADER' => 'SpotzCNCCustomerSDK/SpotzCNCCustomerSDK-Bridging-Header.h',
-		#'SWIFT_OBJC_INTERFACE_HEADER_NAME' => '$(SWIFT_MODULE_NAME)-Swift.h'
 		'SWIFT_OBJC_INTERFACE_HEADER_NAME' => 'SpotzCNCCustomerSDK-Swift.h'
-		# 'SWIFT_VERSION' => 4.2
 	}
 	
-	
 	s.source_files  =  'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/*.{swift,h}', 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
-	# s.public_header_files = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/**.{swift,h}'
 	s.module_map = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Modules/module.modulemap'
 	s.module_name = 'SpotzCNCCustomerSDK'
 

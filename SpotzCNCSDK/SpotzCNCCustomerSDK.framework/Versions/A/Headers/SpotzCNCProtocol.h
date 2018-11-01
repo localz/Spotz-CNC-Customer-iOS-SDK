@@ -97,23 +97,22 @@
  * @param order The related order object that was triggered by this event
  * @return Return custom message to be presented in the push notification
  */
-- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore * _Nonnull)store order:(SpotzCNCOrder * _Nonnull)order __deprecated_msg("Please use spotzCNCSDKNotificationOnSiteEntry:order instead");
+- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenEnteringStore:(SpotzCNCLocationStore * _Nonnull)store order:(SpotzCNCOrder * _Nonnull)order;
 
 /**
  * The custom message to display when order is checked in while app is in the background.
  * @param order Order object to checkin
  * @return Return custom message to be presented in the push notification
  */
-- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder * _Nullable)order __deprecated_msg("Please use spotzCNCSDKNotificationWhenCheckingInOrder:error instead");
+- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder * _Nullable)order;
 
 /**
  * The custom message to display when order is cannot be checked in while app is in the background.
- * @note If implemented, this method will take preference over spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:
  * @param order Order object to checkin
  * @param error Error object containing reason of why order cannot be checked in
  * @return Return custom message to be presented in the push notification.
  */
-- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder * _Nullable)order error:(NSError * _Nullable)error __deprecated_msg("Please use spotzCNCSDKNotifiationWhenCheckingInOrder:error instead");
+- (NSString * _Nullable)spotzCNCSDKNotificationMessageWhenOrderCheckedInBackground:(SpotzCNCOrder * _Nullable)order error:(NSError * _Nullable)error;
 
 /**
  * This is called during spot events, e.g. enter/exit Spot. The event information is in the SpotzData object. You can return additional information that will be stored in the event log.
