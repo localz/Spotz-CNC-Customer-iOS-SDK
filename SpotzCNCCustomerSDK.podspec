@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.9.1'
+	s.version = '1.9.2'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
 	s.static_framework = true
 	s.swift_version = '4.2'
 	s.requires_arc = true
-	s.xcconfig = {
+	s.pod_target_xcconfig = {
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)',
 		'DEFINES_MODULE' => 'YES',
 		'CLANG_ENABLE_MODULES' => 'YES',
@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
 	}
 	
 	s.source_files  =  'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/*.{swift,h}', 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
-	s.module_map = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Modules/module.modulemap'
-	s.module_name = 'SpotzCNCCustomerSDK'
+    # s.module_map = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Modules/module.modulemap'
+	# s.module_name = 'SpotzCNCCustomerSDK'
 
 	s.preserve_paths = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/*'
 	s.vendored_frameworks = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'

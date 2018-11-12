@@ -7,7 +7,12 @@
 //
 
 // Forward class delcarations for this header
-// You will still need to import them seperately before use
+// You will still need to import these seperately before use
+//  (Objective-C)
+//      #import <SpotzCNCCustomerSDK/SpotzCNCCustomerSDK-Swift.h>
+//      #import <SpotzSDK/SpotzSDK.h>
+//  (Swift)
+//      import SpotzCNCCustomerSDK
 @class SpotzCNCNotification;
 @class SpotzData;
 @class SpotzSiteDetails;
