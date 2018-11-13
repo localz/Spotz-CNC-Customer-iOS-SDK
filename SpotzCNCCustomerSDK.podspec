@@ -30,9 +30,6 @@ Pod::Spec.new do |s|
 	}
 	
 	s.source_files  =  'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Headers/*.{swift,h}', 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
-    # s.module_map = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/Modules/module.modulemap'
-	# s.module_name = 'SpotzCNCCustomerSDK'
-
 	s.preserve_paths = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework/*'
 	s.vendored_frameworks = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
 	s.frameworks = 'CoreLocation','CoreBluetooth'
