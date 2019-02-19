@@ -20,8 +20,18 @@ typedef enum {
     SpotzCNCOrderStatusReady,
     /** @brief Order was checked in by customer, but not yet acknowledged by attendant */
     SpotzCNCOrderStatusNotified,
-     /** @brief Order was checked in by customer and was acknowledged by attendant */
-    SpotzCNCOrderStatusAssigned
+    /** @brief Order was checked in by customer and was acknowledged by attendant */
+    SpotzCNCOrderStatusAssigned,
+    /** @brief Order status when order is not yet ready to be collected by customer, but picking of order is completed. */
+    SpotzCNCOrderStatusPendingPicked,
+    /** @brief Order status when order is not yet ready to be collected by customer, but packing of order is completed. */
+    SpotzCNCOrderStatusPendingPacked,
+    /** @brief Orders in this status not visible to customer SDK. */
+    SpotzCNCOrderStatusHandover,
+    /** @brief Orders in this status not visible to customer SDK. */
+    SpotzCNCOrderStatusFailedComplete,
+    /** @brief Orders in this status not visible to customer SDK. */
+    SpotzCNCOrderStatusDeleted
 } SpotzCNCOrderStatus;
 
 @interface SpotzCNCOrder : NSObject<NSCoding>
@@ -75,7 +85,16 @@ typedef enum {
  */
 - (BOOL) isTimeToNotify;
 
-
+/**
+ * Converts the order status to a string
+ * @return string representation of the order status
+ */
 - (NSString *)orderStatusString;
+
+/**
+ * Class function converts the order status to a string
+ * @return string representation of the order status
+ */
++ (NSString *)orderStatusString:(SpotzCNCOrderStatus)orderStatus;
 
 @end

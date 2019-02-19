@@ -175,6 +175,23 @@
  */
 - (void)deleteOrderNumber:(NSString *)orderNumber completion:(void(^)(NSError *error))completion;
 
+/**
+ * Adds a comment to an order
+ * @param orderNumber The order number to add the comment to
+ * @param orderStatus This can be either SpotzCNCOrderStatusNotReady, SpotzCNCOrderStatusPendingPicked, SpotzCNCOrderStatusPendingPacked, SpotzCNCOrderStatusReady. If specified, comments only will be added to order if it is in that status
+ * @param comments The comment to add to the order
+ * @param completion Completion block which returns error if any
+ */
+- (void)addCommentsToOrder:(NSString *)orderNumber orderStatus:(SpotzCNCOrderStatus)orderStatus comments:(NSString *)comments completion:(void(^)(NSError *error))completion;
+
+/**
+ * Adds a comment to an order
+ * @param orderNumber The order number to add the comment to
+ * @param comments The comment to add to the order
+ * @param completion Completion block which returns error if any
+ */
+- (void)addCommentsToOrder:(NSString *)orderNumber comments:(NSString *)comments completion:(void(^)(NSError *error))completion;
+
 // Push Configuration
 
 /**
