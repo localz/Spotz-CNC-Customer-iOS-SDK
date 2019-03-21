@@ -36,5 +36,5 @@ Pod::Spec.new do |s|
 	s.frameworks = 'CoreLocation','CoreBluetooth'
 
 	s.dependency 'SpotzSDK'
-	s.dependency 'SpotzPushSDK'
+	#s.dependency 'SpotzPushSDK'
 end
