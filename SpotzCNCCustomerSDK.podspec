@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.9.8'
+	s.version = '1.10.0'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
@@ -36,5 +36,5 @@ Pod::Spec.new do |s|
 	s.frameworks = 'CoreLocation','CoreBluetooth'
 
 	s.dependency 'SpotzSDK'
-	#s.dependency 'SpotzPushSDK'
+	s.dependency 'LocalzPushSDK'
 end
