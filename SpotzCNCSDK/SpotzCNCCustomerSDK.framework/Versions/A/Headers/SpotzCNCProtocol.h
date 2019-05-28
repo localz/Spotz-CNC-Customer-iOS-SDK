@@ -6,18 +6,18 @@
 //  Copyright © 2018 Localz Pty Ltd. All rights reserved.
 //
 
-// Forward class delcarations for this header
-// You will still need to import these seperately before use
+// Forward class delcarations for SpotzCNCNotification requires seperate importing befoore it can be used
 //  (Objective-C)
+//      #import <SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.h>
 //      #import <SpotzCNCCustomerSDK/SpotzCNCCustomerSDK-Swift.h>
-//      #import <SpotzSDK/SpotzSDK.h>
 //  (Swift)
+//      #import <SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.h> (bridging header)
 //      import SpotzCNCCustomerSDK
-@class SpotzCNCNotification;
-@class SpotzData;
-@class SpotzSiteDetails;
 
+// Dependencies
+#import <SpotzSDK/SpotzSDK.h>
 // Models
+@class SpotzCNCNotification;
 #import <SpotzCNCCustomerSDK/SpotzCNCCustomer.h>
 #import <SpotzCNCCustomerSDK/SpotzCNCLocationStore.h>
 #import <SpotzCNCCustomerSDK/SpotzCNCLocationStorePickup.h>
