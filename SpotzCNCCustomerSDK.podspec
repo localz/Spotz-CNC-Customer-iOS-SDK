@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.11.0'
+	s.version = '1.12.0'
 	s.platform = :ios,'8.0'
 	s.ios.deployment_target = '8.0'
 
@@ -20,10 +20,10 @@ Pod::Spec.new do |s|
 
 	s.requires_arc = true
 	s.static_framework = true
-	s.swift_version = '4.0'
+	s.swift_version = '5.1'
 	s.requires_arc = true
 	s.pod_target_xcconfig = {
-		'SWIFT_VERSION' => '4.0',
+		'SWIFT_VERSION' => '5.1',
 		'FRAMEWORK_SERCH_PATHS' => '$(inherited)',
 		'DEFINES_MODULE' => 'YES',
 		'CLANG_ENABLE_MODULES' => 'YES',
