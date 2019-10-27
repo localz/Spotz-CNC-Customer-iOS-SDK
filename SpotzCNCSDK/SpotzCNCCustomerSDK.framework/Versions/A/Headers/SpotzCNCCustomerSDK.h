@@ -266,6 +266,13 @@
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
 
 /**
+ * Sets priority sites to always be monitored for location based events. This should be less than 5, but is not a hard limit.
+ * Note: This method should only be used with push based site monitoring. To enable this, provide the initialisation option `"staticMonitoring":true`.
+ * @param siteIds An array of site identifiers
+*/
+- (void)setPrioritySiteMonitoringForIds:(NSArray<NSString *> *)siteIds;
+
+/**
  * Check if the retail store where the order is placed is open so customer can be notified.
  * @return true if store is open
  */
