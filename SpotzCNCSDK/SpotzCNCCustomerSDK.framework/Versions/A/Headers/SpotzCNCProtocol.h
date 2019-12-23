@@ -42,7 +42,7 @@
  * Called when SDK init returns an error
  * @param error Error object returned by the init
  */
-- (void)spotzCNCSDKInitFailed:(NSError *_Nullable)error;
+- (void)spotzCNCSDKInitFailed:(NSError *)error;
 
 @optional
 
@@ -53,7 +53,7 @@
  * @param order Order object that this event was related to
  * @return Return true to record. Default is false.
  */
-- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *_Nonnull)spot activity:(SpotzCNCActivityType)activity order:(SpotzCNCOrder *_Nonnull)order;
+- (BOOL)spotzCNCSDKShouldRecordActivityForSpot:(SpotzData *)spot activity:(SpotzCNCActivityType)activity order:(SpotzCNCOrder *)order;
 
 /**
  * Called when SDK receives a customer registration confirmation from the Localz server
@@ -64,13 +64,13 @@
  * Called when details of non-completed have been updated.
  * @param orders Array of non-completed orders
  */
-- (void)spotzCNCSDKUpdateOrders:(NSArray *_Nonnull)orders;
+- (void)spotzCNCSDKUpdateOrders:(NSArray *)orders;
 
 /**
  * Called when order has been completed
  * @param order Order object this event belongs to
  */
-- (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *_Nonnull)order;
+- (void)spotzCNCSDKCompletedOrderPickup:(SpotzCNCOrder *)order;
 
 /**
  * Called when bluetooth state changed. Only relevant when beacon is used in the implementation.
@@ -89,7 +89,7 @@
  * @param index Index of the action
  * @param order Order object that this action is related to
  */
-- (void)spotzCNCSDKNotificationDidSelectActionAtIndex:(int)index order:(SpotzCNCOrder *_Nonnull)order;
+- (void)spotzCNCSDKNotificationDidSelectActionAtIndex:(int)index order:(SpotzCNCOrder *)order;
 
 @end
 
@@ -124,14 +124,14 @@
  * @param spot SpotzData object that contains the event information
  * @return List of key:value to be stored on the server as part of the event record. Default is nil.
  */
-- (NSDictionary *_Nonnull)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *_Nonnull)spot;
+- (NSDictionary *)spotzCNCSDKRecordActivityAttributesForSpot:(SpotzData *)spot;
 
 /**
  * Return true to use the custom category
  * @param order Order object that this category will be presented for
  * @return Return true to enable custom category. Default is false.
  */
-- (BOOL)spotzCNCSDKNotificationMessagePresentCheckinOptionsForOrder:(SpotzCNCOrder *_Nonnull)order;
+- (BOOL)spotzCNCSDKNotificationMessagePresentCheckinOptionsForOrder:(SpotzCNCOrder *)order;
 
 /**
  * This is called when the CNC SDK is initialised as the SDK needs to set the number of custom actions required for local notifications. This is optional. If not set, the default actions `checkInNow` and `checkInLater` will kick in.
@@ -145,7 +145,7 @@
  * @param index The button index of a local notification for which the title needs to be set
  * @return String value to be associated with the local notification buttons
  */
-- (NSString *_Nullable)spotzCNCSDKNotificationActionTitleForIndex:(int)index;
+- (NSString *)spotzCNCSDKNotificationActionTitleForIndex:(int)index;
 
 /**
  *  This is called when the user enters a site's region (such as a geofence or beacon) while the app is asleep or inactive.
