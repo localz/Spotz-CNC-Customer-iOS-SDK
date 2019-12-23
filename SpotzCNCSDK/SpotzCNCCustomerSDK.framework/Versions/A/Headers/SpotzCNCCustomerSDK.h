@@ -30,6 +30,8 @@
  */
 + (void)initWithAppId:(NSString *)appId spotzAppKey:(NSString *)spotzAppKey cncAppKey:(NSString *)cncAppKey delegate:(id)delegate dataSource:(id)dataSource options:(NSDictionary *)options;
 
++ (NSString *)sdkVersion;
+
 // SDK Usage
 /**
  * Start configured location, beacons and geofences. This needs to be called after successful initialisation of the SDK. See https://localz.github.io/spotz-cnc-sdk-docs/?objective_c#4-start-services for example on how to implement it.
