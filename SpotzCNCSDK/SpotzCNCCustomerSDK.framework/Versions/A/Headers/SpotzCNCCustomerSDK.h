@@ -30,6 +30,8 @@
  */
 + (void)initWithAppId:(NSString *)appId spotzAppKey:(NSString *)spotzAppKey cncAppKey:(NSString *)cncAppKey delegate:(id)delegate dataSource:(id)dataSource options:(NSDictionary *)options;
 
++ (NSString *)sdkVersion;
+
 // SDK Usage
 /**
  * Start configured location, beacons and geofences. This needs to be called after successful initialisation of the SDK. See https://localz.github.io/spotz-cnc-sdk-docs/?objective_c#4-start-services for example on how to implement it.
@@ -264,13 +266,6 @@
  * @return true if inside, false if outside or not yet detected
  */
 - (BOOL)isInsideSpotAtSiteId:(NSString *)siteId;
-
-/**
- * Sets priority sites to always be monitored for location based events. This should be less than 5, but is not a hard limit.
- * Note: This method should only be used with push based site monitoring. To enable this, provide the initialisation option `"staticMonitoring":true`.
- * @param siteIds An array of site identifiers
-*/
-- (void)setPrioritySiteMonitoringForIds:(NSArray<NSString *> *)siteIds;
 
 /**
  * Check if the retail store where the order is placed is open so customer can be notified.
