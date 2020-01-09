@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.11.2'
+	s.version = '1.11.3'
 	s.platform = :ios,'9.0'
 	s.ios.deployment_target = '9.0'
 
