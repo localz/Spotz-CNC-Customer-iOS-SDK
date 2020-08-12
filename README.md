@@ -22,7 +22,7 @@ There are only 3 actions to implement before using the click and collect SDK - *
 
 **1. Set authorization message**
 
-For iOS 8 or later, please add the following key to Info.plist with a message that will be presented to the user when they first start the app.
+For iOS 9 or later, please add the following key to Info.plist with a message that will be presented to the user when they first start the app.
 ```
 NSLocationAlwaysUsageDescription
 ```
@@ -291,4 +291,4 @@ For bugs, feature requests, or other questions, [file an issue](https://github.c
 
 ## License
 
-Copyright 2016 Localz Pty Ltd
+Copyright 2020 Localz Pty Ltd
