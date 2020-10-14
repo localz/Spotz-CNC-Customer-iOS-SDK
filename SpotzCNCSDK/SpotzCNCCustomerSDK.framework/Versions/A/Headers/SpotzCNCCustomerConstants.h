@@ -12,6 +12,15 @@ extern NSString * const SPOTZ_CNC_NETWORK_NOTIFICATION;
 // Error code for CNC
 extern int const EProjectDisabled;
 
+// Site in/out events
+extern NSString * const SPOTZ_CNC_INSIDE_SPOT_NOTIFICATION;
+extern NSString * const SPOTZ_CNC_OUTSIDE_SPOT_NOTIFICATION;
+
+// Configuration params
+extern NSString * const CONFIG_ENABLE_PICKUP_WINDOW;
+extern NSString * const CONFIG_ENABLE_SERVICE_AVAILABLE;
+extern NSString * const CONFIG_NOTIFICATION_TIMEOUT_SEC;
+
 typedef enum {
     /** @brief Location services not determined */
     SpotzCNCLocationServicesNotDetermined = 0,
@@ -27,3 +36,9 @@ typedef enum {
     /** @brief Activity type when device exits a site */
     SpotzCNCActivityTypeExit
 } SpotzCNCActivityType;
+
+typedef enum {
+    SpotzCNCNotificationStatusReady,
+    SpotzCNCNotificationStatusAcknowledged,
+    SpotzCNCNotificationStatusFeedback
+} SpotzCNCNotificationStatus;

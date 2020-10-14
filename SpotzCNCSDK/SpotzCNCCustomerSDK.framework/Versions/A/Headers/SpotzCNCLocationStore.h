@@ -10,8 +10,6 @@
 #import "SpotzCNCLocationStorePickup.h"
 
 @interface SpotzCNCLocationStore : NSObject
-/** @brief Deprecated ID of the store */
-@property (nonatomic, readonly, strong) NSString *identifier __deprecated_msg("identifier is no longer used. Please use locationId as the identifier");
 /** @brief Internal location ID */
 @property (nonatomic, readonly, strong) NSString *locationId;
 /** @brief Name of the Location, for example "Melbourne Store" */

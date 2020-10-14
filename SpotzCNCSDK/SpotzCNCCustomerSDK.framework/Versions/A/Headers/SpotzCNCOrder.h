@@ -38,40 +38,40 @@ typedef enum {
 /** @brief orderStatus */
 @property (nonatomic, readonly) SpotzCNCOrderStatus orderStatus;
 /** @brief Name of the customer */
-@property (nonatomic, readonly, strong) NSString *deliveryName;
+@property (nonatomic, readonly, strong) NSString * _Nullable deliveryName;
 /** @brief Total amount of the order */
-@property (nonatomic, readonly, strong) NSNumber *orderAmount;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable orderAmount;
 /** @brief Date of the order */
-@property (nonatomic, readonly, strong) NSDate *orderDate;
+@property (nonatomic, readonly, strong) NSDate * _Nullable orderDate;
 /** @brief Order number, unique per project */
-@property (nonatomic, readonly, strong) NSString *orderNumber;
+@property (nonatomic, readonly, strong) NSString * _Nonnull orderNumber;
 /** @brief Start time of pickup window */
-@property (nonatomic, readonly, strong) NSDate *pickupStart;
+@property (nonatomic, readonly, strong) NSDate * _Nullable pickupStart;
 /** @brief End time fo pickup window */
-@property (nonatomic, readonly, strong) NSDate *pickupEnd;
+@property (nonatomic, readonly, strong) NSDate * _Nullable pickupEnd;
 /** @brief Pickup ID, for example "CC", "DT", "XP" */
-@property (nonatomic, readonly, strong) NSString *selectedPickupId;
+@property (nonatomic, readonly, strong) NSString * _Nullable selectedPickupId;
 /** @brief Number of items in the order */
-@property (nonatomic, readonly, strong) NSNumber *totalItems;
+@property (nonatomic, readonly, strong) NSNumber * _Nullable totalItems;
 /** @brief Attributes of the order, key-value pairs */
-@property (nonatomic, readonly, strong) NSDictionary *specific;
+@property (nonatomic, readonly, strong) NSDictionary * _Nullable specific;
 /** @brief Whether customer should be allowed to check-in if SpotzCNCOrderStatusNotReady */
 @property (nonatomic, readonly) BOOL isAllowingCheckinPendingOrders;
 /** @brief Whether order should be automatically checked in (without customer confirmation) when customer enters site of the location. */
 @property (nonatomic, readonly) BOOL isAllowingAutoCheckinOnSiteEntry;
 /** @brief Details of the store to which the order belongs */
-@property (nonatomic, readonly, strong) SpotzCNCLocationStore *store;
+@property (nonatomic, readonly, strong) SpotzCNCLocationStore * _Nullable store;
 /** @brief Details of attendant who acknowledged order */
-@property (nonatomic, readonly, strong) SpotzCNCAttendant *attendant;
+@property (nonatomic, readonly, strong) SpotzCNCAttendant * _Nullable attendant;
 /** @brief Proximity triggers that can be set on the order, are used to let attendant know the exact position of the customer, for example "Bay 1" */
-@property (nonatomic, readonly, strong) NSArray *proximityTriggers;
+@property (nonatomic, readonly, strong) NSArray * _Nullable proximityTriggers;
 
 /**
  * Initialise Order data
  */
-- (SpotzCNCOrder *)initWithData:(NSDictionary *)data;
-- (SpotzCNCOrder *)initWithOrderNumber:(NSString *)orderNumber orderDate:(NSDate *)orderDate deliveryName:(NSString *)deliveryName orderStatus:(SpotzCNCOrderStatus)status orderAmount:(NSString *)amount pickupStart:(NSDate *)pickupStart pickupDate:(NSDate *)pickupEnd selectedPickupId:(NSString *)selectedPickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)specific allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin __deprecated_msg("orderAmount is no longer supporting NSString class. Use alternative initWithOrderNumber: instead.");
-- (SpotzCNCOrder *)initWithOrderNumber:(NSString *)number date:(NSDate *)date deliveryName:(NSString *)deliveryName status:(SpotzCNCOrderStatus)status amount:(NSNumber *)amount pickupStartDate:(NSDate *)start pickupEndDate:(NSDate *)end selectedPickupId:(NSString *)pickupId totalItems:(NSNumber *)totalItems attributes:(NSDictionary *)attributes allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin;
+- (SpotzCNCOrder * _Nonnull)initWithData:(NSDictionary * _Nonnull)data;
+
+- (SpotzCNCOrder * _Nonnull)initWithOrderNumber:(NSString * _Nonnull)number date:(NSDate * _Nullable)date deliveryName:(NSString * _Nullable)deliveryName status:(SpotzCNCOrderStatus)status amount:(NSNumber * _Nullable)amount pickupStartDate:(NSDate * _Nullable)start pickupEndDate:(NSDate * _Nullable)end selectedPickupId:(NSString * _Nullable)pickupId totalItems:(NSNumber * _Nullable)totalItems attributes:(NSDictionary * _Nullable)attributes allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin;
 
 /**
  * Whether an order is within the pickup window. NOTE: This is not store opening hours check!
@@ -89,12 +89,12 @@ typedef enum {
  * Converts the order status to a string
  * @return string representation of the order status
  */
-- (NSString *)orderStatusString;
+- (NSString * _Nonnull)orderStatusString;
 
 /**
  * Class function converts the order status to a string
  * @return string representation of the order status
  */
-+ (NSString *)orderStatusString:(SpotzCNCOrderStatus)orderStatus;
++ (NSString * _Nonnull)orderStatusString:(SpotzCNCOrderStatus)orderStatus;
 
 @end

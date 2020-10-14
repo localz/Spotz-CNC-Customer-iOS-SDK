@@ -3,9 +3,9 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '1.11.5'
-	s.platform = :ios,'9.0'
-	s.ios.deployment_target = '9.0'
+	s.version = '4.0.0'
+	s.platform = :ios,'10.0'
+	s.ios.deployment_target = '10.0'
 
 	s.homepage = 'http://www.localz.com'
 	s.license = {
@@ -35,6 +35,6 @@ Pod::Spec.new do |s|
 	s.vendored_frameworks = 'SpotzCNCSDK/SpotzCNCCustomerSDK.framework'
 	s.frameworks = 'CoreLocation','CoreBluetooth'
 
-	s.dependency 'SpotzSDK', '~> 3.2.9'
-	s.dependency 'LocalzPushSDK'
+	s.dependency 'SpotzSDK', '~> 4.0.0'
+	s.dependency 'LocalzPushSDK', '~>4.0.0'
 end
