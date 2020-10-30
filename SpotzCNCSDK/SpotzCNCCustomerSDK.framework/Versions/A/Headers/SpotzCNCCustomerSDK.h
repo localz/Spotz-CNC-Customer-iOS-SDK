@@ -288,3 +288,6 @@
 - (BOOL) isPreciseLocationEnabled;
 
 @end
+
+FOUNDATION_EXPORT double SpotzCNCCustomerSDKVersionNumber;
+FOUNDATION_EXPORT const unsigned char SpotzCNCCustomerSDKVersionString[];

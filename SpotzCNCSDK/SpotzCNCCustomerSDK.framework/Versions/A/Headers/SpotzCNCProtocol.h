@@ -13,11 +13,10 @@
 //  (Swift)
 //      #import <SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.h> (bridging header)
 //      import SpotzCNCCustomerSDK
-
 // Dependencies
 #import <SpotzSDK/SpotzSDK.h>
 // Models
-@class SpotzCNCNotification;
+#import <SpotzCNCCustomerSDK/SpotzCNCNotification.h>
 #import <SpotzCNCCustomerSDK/SpotzCNCCustomer.h>
 #import <SpotzCNCCustomerSDK/SpotzCNCLocationStore.h>
 #import <SpotzCNCCustomerSDK/SpotzCNCLocationStorePickup.h>
@@ -73,6 +72,15 @@
  * @param statusUpdate the status of SpotzCNCNotificationStatus will be passed into this
  */
 - (void)spotzCNCUpdateReceivedWithStatus:(SpotzCNCNotificationStatus)statusUpdate;
+
+/**
+ * Called when update is received via remote push notification. This method is useful when you want to know when to refresh the UI..
+ * NOTE: SpotzCNCNotificationStatusReady is always sent when order is ready, however SpotzCNCNotificationStatusAcknowledged and SpotzCNCNotificationStatusFeedback is only sent when the order was acknowledged from this device.
+ * In the later case you can force refetch the order when they open the app or go to the oder list screen.
+ * @param statusUpdate the status of SpotzCNCNotificationStatus will be passed into this
+ * @param order The order that is related to this update. This may be null if there was a delay between push and receiving the notification (ie order may have progressed and/or closed)
+ */
+- (void)spotzCNCUpdateReceivedWithStatus:(SpotzCNCNotificationStatus)statusUpdate order:(SpotzCNCOrder *_Nullable)order;
 
 /**
  * Called when order has been completed
