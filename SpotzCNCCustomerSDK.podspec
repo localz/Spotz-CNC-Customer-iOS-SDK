@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
 	s.name	= 'SpotzCNCCustomerSDK'
 	s.summary = 'SpotzCNCCustomerSDK'
 
-	s.version = '4.0.2'
+	s.version = '4.1.0'
 	s.platform = :ios,'10.0'
 	s.ios.deployment_target = '10.0'
 
@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
-			Copyright 2020 Localz Pty Ltd.
+			Copyright 2021 Localz Pty Ltd.
 			LICENSE
 	}
 	s.author = { 'Localz Pty Ltd' => 'info@localz.com' }

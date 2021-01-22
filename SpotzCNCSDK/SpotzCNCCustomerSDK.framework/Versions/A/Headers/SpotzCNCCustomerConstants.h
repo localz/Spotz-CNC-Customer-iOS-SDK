@@ -21,6 +21,10 @@ extern NSString * const CONFIG_ENABLE_PICKUP_WINDOW;
 extern NSString * const CONFIG_ENABLE_SERVICE_AVAILABLE;
 extern NSString * const CONFIG_NOTIFICATION_TIMEOUT_SEC;
 
+extern NSString * const CONFIG_PICKUP_NOW_ACTION_LABEL;
+extern NSString * const CONFIG_PICKUP_LATER_ACTION_LABEL;
+
+
 typedef enum {
     /** @brief Location services not determined */
     SpotzCNCLocationServicesNotDetermined = 0,
