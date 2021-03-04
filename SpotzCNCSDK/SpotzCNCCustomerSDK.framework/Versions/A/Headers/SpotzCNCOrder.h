@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SpotzCNCOrderAddress.h"
 #import "SpotzCNCLocationStorePickup.h"
 #import "SpotzCNCLocationStore.h"
 #import "SpotzCNCAttendant.h"
@@ -34,6 +35,11 @@ typedef enum {
     SpotzCNCOrderStatusDeleted
 } SpotzCNCOrderStatus;
 
+typedef enum {
+    SpotzCNCOrderDomainCollection = 1,
+    SpotzCNCOrderDomainDelivery
+} SpotzCNCOrderDomain;
+
 @interface SpotzCNCOrder : NSObject<NSCoding>
 /** @brief orderStatus */
 @property (nonatomic, readonly) SpotzCNCOrderStatus orderStatus;
@@ -45,6 +51,8 @@ typedef enum {
 @property (nonatomic, readonly, strong) NSDate * _Nullable orderDate;
 /** @brief Order number, unique per project */
 @property (nonatomic, readonly, strong) NSString * _Nonnull orderNumber;
+/** @brief Order domain, delivery or collection order */
+@property (nonatomic, readonly) SpotzCNCOrderDomain domain;
 /** @brief Start time of pickup window */
 @property (nonatomic, readonly, strong) NSDate * _Nullable pickupStart;
 /** @brief End time fo pickup window */
@@ -65,13 +73,23 @@ typedef enum {
 @property (nonatomic, readonly, strong) SpotzCNCAttendant * _Nullable attendant;
 /** @brief Proximity triggers that can be set on the order, are used to let attendant know the exact position of the customer, for example "Bay 1" */
 @property (nonatomic, readonly, strong) NSArray * _Nullable proximityTriggers;
+/** @brief Order address  - please note that address may contain empty values when address is not defined instead of nil. It is recommended that use address!.isEmpty() to check if address is not set. */
+@property (nonatomic, readonly, strong) SpotzCNCOrderAddress * _Nullable address;
 
 /**
  * Initialise Order data
  */
 - (SpotzCNCOrder * _Nonnull)initWithData:(NSDictionary * _Nonnull)data;
 
+/**
+ * Initialise Order data as a collection order. To initialise a delivery order please use the other initialisation method
+ */
 - (SpotzCNCOrder * _Nonnull)initWithOrderNumber:(NSString * _Nonnull)number date:(NSDate * _Nullable)date deliveryName:(NSString * _Nullable)deliveryName status:(SpotzCNCOrderStatus)status amount:(NSNumber * _Nullable)amount pickupStartDate:(NSDate * _Nullable)start pickupEndDate:(NSDate * _Nullable)end selectedPickupId:(NSString * _Nullable)pickupId totalItems:(NSNumber * _Nullable)totalItems attributes:(NSDictionary * _Nullable)attributes allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin;
+
+/**
+ * Initialise Order data with domain settable to Collection or Delivery and address support
+ */
+- (SpotzCNCOrder * _Nonnull)initWithOrderNumber:(NSString * _Nonnull)number date:(NSDate * _Nullable)date domain:(SpotzCNCOrderDomain)domain deliveryName:(NSString * _Nullable)deliveryName address:(SpotzCNCOrderAddress * _Nullable)address status:(SpotzCNCOrderStatus)status amount:(NSNumber * _Nullable)amount pickupStartDate:(NSDate * _Nullable)start pickupEndDate:(NSDate * _Nullable)end selectedPickupId:(NSString * _Nullable)pickupId totalItems:(NSNumber * _Nullable)totalItems attributes:(NSDictionary * _Nullable)attributes allowCheckinPending:(BOOL)allowCheckinPending allowAutoCheckin:(BOOL)allowAutoCheckin;
 
 /**
  * Whether an order is within the pickup window. NOTE: This is not store opening hours check!
@@ -96,5 +114,10 @@ typedef enum {
  * @return string representation of the order status
  */
 + (NSString * _Nonnull)orderStatusString:(SpotzCNCOrderStatus)orderStatus;
+
+/**
+ * Returns trackId of the order. This is a unique ID that is used to identify an order via customer portal websites.
+ */
+- (NSString * _Nullable) trackId;
 
 @end
