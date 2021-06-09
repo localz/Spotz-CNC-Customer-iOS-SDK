@@ -57,6 +57,8 @@ typedef enum {
 @property (nonatomic, readonly, strong) NSDate * _Nullable pickupStart;
 /** @brief End time fo pickup window */
 @property (nonatomic, readonly, strong) NSDate * _Nullable pickupEnd;
+/** @brief Expected arrival or delivery time */
+@property (nonatomic, readonly, strong) NSDate * _Nullable expectedDeliveryTime;
 /** @brief Pickup ID, for example "CC", "DT", "XP" */
 @property (nonatomic, readonly, strong) NSString * _Nullable selectedPickupId;
 /** @brief Number of items in the order */
