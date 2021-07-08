@@ -94,12 +94,20 @@
 - (void)logoutCustomerWithSuccess:(void(^ _Nullable)(void))success failure:(void(^ _Nullable)(NSError * _Nullable error))failure;
 
 /**
- * Retrieves non-completed orders and checks customer location - if recheck is true - to trigger any checkin event
+ * Retrieves NON-COMPLETED orders ONLY and checks customer location - if recheck is true - to trigger any checkin event. To return ALL orders please use `retrieveOrdersWithRecheckLocation:includeCompleted:completion:` method.
  * @param recheck Set to true to recheck location of customer. This will trigger the notification events which you can capture. You may want to set this to false if you only want to retrieve orders without triggering any notification events.
  * @param completion Completion block with returns orders (nil if none) or error if any
  */
 - (void)retrieveOrdersWithRecheckLocation:(BOOL)recheck completion:(void(^ _Nullable)(NSArray<SpotzCNCOrder *> * _Nullable orders, NSError * _Nullable error))completion;
 
+/**
+ * Retrieves orders with the option of including completed orders and checks customer location - if recheck is true - to trigger any checkin event
+ * @param recheck Set to true to recheck location of customer. This will trigger the notification events which you can capture. You may want to set this to false if you only want to retrieve orders without triggering any notification events.
+ * @param includeCompleted Set to true to include any completed orders
+ * @param completion Completion block with returns orders (nil if none) or error if any
+ */
+- (void) retrieveOrdersWithRecheckLocation:(BOOL)recheck includeCompleted:(BOOL)includeCompleted completion:(void(^ _Nullable)(NSArray<SpotzCNCOrder *> * _Nullable orders, NSError * _Nullable error))completion;
+    
 /**
  * Check if user at the right location/store/site and retrieves latest orders.
  * @param completion callback which returns list of orders (nil of none) or error if any

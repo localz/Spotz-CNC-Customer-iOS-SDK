@@ -78,6 +78,10 @@ typedef enum {
 /** @brief Order address  - please note that address may contain empty values when address is not defined instead of nil. It is recommended that use address!.isEmpty() to check if address is not set. */
 @property (nonatomic, readonly, strong) SpotzCNCOrderAddress * _Nullable address;
 
+@property (nonatomic, readonly, strong) NSDate * _Nullable completedDate;
+
+@property (nonatomic, readonly, strong) NSDate * _Nullable failedCompletedDate;
+
 /**
  * Initialise Order data
  */
