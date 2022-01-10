@@ -11,7 +11,7 @@ Pod::Spec.new do |s|
 	s.license = {
 		:type => 'Commercial',
 		:text => <<-LICENSE
-			Copyright 2021 Localz Pty Ltd.
+			Copyright 2022 Localz Pty Ltd.
 			LICENSE
 	}
 	s.author = { 'Localz Pty Ltd' => 'info@localz.com' }

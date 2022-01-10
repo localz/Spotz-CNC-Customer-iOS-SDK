@@ -1,0 +1,1365 @@
+BCSymbolMap Version: 2.0
+Apple clang version 13.0.0 (clang-1300.0.29.30)
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk
+iPhoneOS15.2.sdk
+/Users/martemas/Library/Developer/Xcode/DerivedData/SpotzCNCCustomerSDK-aylhhjfgdbdzpveipattetgyazdj/Build/Intermediates.noindex/ArchiveIntermediates/SpotzCNCCustomerSDK/IntermediateBuildFilesPath/SpotzCNCCustomerSDK.build/Release-iphoneos/SpotzCNCCustomerSDK.build/DerivedSources/SpotzCNCCustomerSDK_vers.c
+/Users/martemas/Dev/SpotzCNCCustomerSDK
++[SpotzSDKManager shared]
+___25+[SpotzSDKManager shared]_block_invoke
+-[SpotzSDKManager setupWithProjectId:projectKey:delegate:options:]
+-[SpotzSDKManager startSpotz]
+-[SpotzSDKManager stopSpotz]
+-[SpotzSDKManager recheckSpots]
+-[SpotzSDKManager setupSpotzSDKDelegateObservers]
+___49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke
+___copy_helper_block_e8_32s
+___destroy_helper_block_e8_32s
+___49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke.29
+___49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke_2
+-[SpotzSDKManager spotzInit:]
+-[SpotzSDKManager spotzSiteInit:]
+-[SpotzSDKManager spotzBluetoothStateDidChange:]
+-[SpotzSDKManager spotzLocationServicesStateDidChange:enabled:]
+-[SpotzSDKManager enableSpotzEvents]
+-[SpotzSDKManager disableSpotzEvents]
+-[SpotzSDKManager delegate]
+-[SpotzSDKManager setDelegate:]
+-[SpotzSDKManager .cxx_destruct]
+_shared.spotzSDKManager
+_shared.once
+___block_descriptor_32_e5_v8?0l
+___block_literal_global
+_OBJC_CLASSLIST_REFERENCES_$_
+_OBJC_SELECTOR_REFERENCES_
+_OBJC_SELECTOR_REFERENCES_.2
+_OBJC_CLASSLIST_REFERENCES_$_.3
+_OBJC_SELECTOR_REFERENCES_.5
+_OBJC_SELECTOR_REFERENCES_.7
+_OBJC_SELECTOR_REFERENCES_.9
+_OBJC_SELECTOR_REFERENCES_.11
+_OBJC_SELECTOR_REFERENCES_.13
+_OBJC_CLASSLIST_REFERENCES_$_.14
+_OBJC_SELECTOR_REFERENCES_.16
+_OBJC_SELECTOR_REFERENCES_.18
+_OBJC_SELECTOR_REFERENCES_.20
+_OBJC_SELECTOR_REFERENCES_.23
+_OBJC_SELECTOR_REFERENCES_.25
+___block_descriptor_40_e8_32s_e24_v16?0"NSNotification"8l
+_OBJC_SELECTOR_REFERENCES_.28
+_OBJC_SELECTOR_REFERENCES_.33
+_OBJC_SELECTOR_REFERENCES_.35
+_OBJC_SELECTOR_REFERENCES_.39
+_OBJC_SELECTOR_REFERENCES_.41
+_OBJC_SELECTOR_REFERENCES_.43
+_OBJC_SELECTOR_REFERENCES_.45
+_OBJC_SELECTOR_REFERENCES_.47
+_OBJC_SELECTOR_REFERENCES_.49
+_OBJC_SELECTOR_REFERENCES_.51
+_OBJC_SELECTOR_REFERENCES_.53
+__OBJC_$_CLASS_METHODS_SpotzSDKManager
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+__OBJC_$_PROP_LIST_NSObject
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+__OBJC_PROTOCOL_$_NSObject
+__OBJC_LABEL_PROTOCOL_$_NSObject
+__OBJC_$_PROTOCOL_REFS_SpotzSDKDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SpotzSDKDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SpotzSDKDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SpotzSDKDelegate
+__OBJC_PROTOCOL_$_SpotzSDKDelegate
+__OBJC_LABEL_PROTOCOL_$_SpotzSDKDelegate
+__OBJC_CLASS_PROTOCOLS_$_SpotzSDKManager
+__OBJC_METACLASS_RO_$_SpotzSDKManager
+__OBJC_$_INSTANCE_METHODS_SpotzSDKManager
+_OBJC_IVAR_$_SpotzSDKManager._delegate
+__OBJC_$_INSTANCE_VARIABLES_SpotzSDKManager
+__OBJC_$_PROP_LIST_SpotzSDKManager
+__OBJC_CLASS_RO_$_SpotzSDKManager
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/SDKManagers/SpotzSDKManager.m
+SpotzCNCCustomerSDK/SDKManagers/SpotzSDKManager.m
+__49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke_2
+__49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke.29
+__destroy_helper_block_e8_32s
+__copy_helper_block_e8_32s
+__49-[SpotzSDKManager setupSpotzSDKDelegateObservers]_block_invoke
+__25+[SpotzSDKManager shared]_block_invoke
+/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/usr/include/dispatch/once.h
++[SpotzCNCTaskManager runSafeOnMainThread:]
+__OBJC_$_CLASS_METHODS_SpotzCNCTaskManager
+__OBJC_METACLASS_RO_$_SpotzCNCTaskManager
+__OBJC_CLASS_RO_$_SpotzCNCTaskManager
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/SpotzCNCTaskManager.m
+SpotzCNCCustomerSDK/SpotzCNCTaskManager.m
++[SpotzCNCAppState shared]
+___26+[SpotzCNCAppState shared]_block_invoke
+___26+[SpotzCNCAppState shared]_block_invoke_2
+___copy_helper_block_e8_
+___destroy_helper_block_e8_
++[SpotzCNCAppState listen]
+-[SpotzCNCAppState setupListeners]
+-[SpotzCNCAppState resetListeners]
+-[SpotzCNCAppState listenerHandler:]
++[SpotzCNCAppState state]
+-[SpotzCNCAppState update]
+___26-[SpotzCNCAppState update]_block_invoke
+-[SpotzCNCAppState appState]
+-[SpotzCNCAppState setAppState:]
+_shared.pred
+_shared._sharedObject
+___block_descriptor_40_e8__e23_"SpotzCNCAppState"8?0l
+___block_descriptor_40_e8__e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.6
+_OBJC_SELECTOR_REFERENCES_.8
+_OBJC_CLASSLIST_REFERENCES_$_.9
+_OBJC_SELECTOR_REFERENCES_.15
+_OBJC_SELECTOR_REFERENCES_.17
+_OBJC_SELECTOR_REFERENCES_.19
+_OBJC_CLASSLIST_REFERENCES_$_.20
+_OBJC_CLASSLIST_REFERENCES_$_.21
+___block_descriptor_40_e8_32s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.27
+__OBJC_$_CLASS_METHODS_SpotzCNCAppState
+__OBJC_METACLASS_RO_$_SpotzCNCAppState
+__OBJC_$_INSTANCE_METHODS_SpotzCNCAppState
+_OBJC_IVAR_$_SpotzCNCAppState._appState
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCAppState
+__OBJC_$_PROP_LIST_SpotzCNCAppState
+__OBJC_CLASS_RO_$_SpotzCNCAppState
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/SpotzCNCAppState.m
+SpotzCNCCustomerSDK/SpotzCNCAppState.m
+__26-[SpotzCNCAppState update]_block_invoke
+__destroy_helper_block_e8_
+__copy_helper_block_e8_
+__26+[SpotzCNCAppState shared]_block_invoke_2
+__26+[SpotzCNCAppState shared]_block_invoke
+-[SpotzCNCLocationStorePickup initWithData:]
+-[SpotzCNCLocationStorePickup encodeWithCoder:]
+-[SpotzCNCLocationStorePickup initWithCoder:]
+-[SpotzCNCLocationStorePickup pickupId]
+-[SpotzCNCLocationStorePickup setPickupId:]
+-[SpotzCNCLocationStorePickup name]
+-[SpotzCNCLocationStorePickup setName:]
+-[SpotzCNCLocationStorePickup desc]
+-[SpotzCNCLocationStorePickup setDesc:]
+-[SpotzCNCLocationStorePickup imgUrl]
+-[SpotzCNCLocationStorePickup setImgUrl:]
+-[SpotzCNCLocationStorePickup isDefault]
+-[SpotzCNCLocationStorePickup setIsDefault:]
+-[SpotzCNCLocationStorePickup closestSpotIds]
+-[SpotzCNCLocationStorePickup setClosestSpotIds:]
+-[SpotzCNCLocationStorePickup .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.4
+_OBJC_SELECTOR_REFERENCES_.12
+_OBJC_SELECTOR_REFERENCES_.22
+_OBJC_SELECTOR_REFERENCES_.26
+_OBJC_SELECTOR_REFERENCES_.30
+_OBJC_SELECTOR_REFERENCES_.32
+_OBJC_SELECTOR_REFERENCES_.34
+_OBJC_SELECTOR_REFERENCES_.36
+_OBJC_SELECTOR_REFERENCES_.38
+_OBJC_SELECTOR_REFERENCES_.40
+_OBJC_SELECTOR_REFERENCES_.42
+_OBJC_SELECTOR_REFERENCES_.46
+__OBJC_METACLASS_RO_$_SpotzCNCLocationStorePickup
+__OBJC_$_INSTANCE_METHODS_SpotzCNCLocationStorePickup
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._isDefault
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._pickupId
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._name
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._desc
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._imgUrl
+_OBJC_IVAR_$_SpotzCNCLocationStorePickup._closestSpotIds
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCLocationStorePickup
+__OBJC_$_PROP_LIST_SpotzCNCLocationStorePickup
+__OBJC_CLASS_RO_$_SpotzCNCLocationStorePickup
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCLocationStorePickup.m
+SpotzCNCCustomerSDK/Models/SpotzCNCLocationStorePickup.m
+SpotzCNCCustomerSDK/Models/SpotzCNCLocationStorePickup.h
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Tools/SpotzCNCCustomerConstants.m
+-[DateUtil init]
+-[DateUtil isWithinWorkingHours:tz:]
+-[DateUtil dateFromTimeString:tz:]
+-[DateUtil isWithinHoursStart:end:]
+-[DateUtil daysConst]
+-[DateUtil setDaysConst:]
+-[DateUtil .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.15
+_OBJC_CLASSLIST_REFERENCES_$_.23
+_OBJC_SELECTOR_REFERENCES_.29
+_OBJC_SELECTOR_REFERENCES_.37
+_OBJC_SELECTOR_REFERENCES_.55
+_OBJC_CLASSLIST_REFERENCES_$_.56
+_OBJC_CLASSLIST_REFERENCES_$_.57
+_OBJC_SELECTOR_REFERENCES_.59
+_OBJC_SELECTOR_REFERENCES_.61
+_OBJC_SELECTOR_REFERENCES_.65
+_OBJC_SELECTOR_REFERENCES_.67
+_OBJC_CLASSLIST_REFERENCES_$_.80
+_OBJC_SELECTOR_REFERENCES_.84
+_OBJC_SELECTOR_REFERENCES_.86
+_OBJC_CLASSLIST_REFERENCES_$_.89
+_OBJC_SELECTOR_REFERENCES_.91
+_OBJC_SELECTOR_REFERENCES_.95
+__OBJC_METACLASS_RO_$_DateUtil
+__OBJC_$_INSTANCE_METHODS_DateUtil
+_OBJC_IVAR_$_DateUtil._daysConst
+__OBJC_$_INSTANCE_VARIABLES_DateUtil
+__OBJC_$_PROP_LIST_DateUtil
+__OBJC_CLASS_RO_$_DateUtil
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Tools/DateUtil.m
+SpotzCNCCustomerSDK/Tools/DateUtil.m
+-[SpotzCNCGeoJson initWithData:]
+-[SpotzCNCGeoJson encodeWithCoder:]
+-[SpotzCNCGeoJson initWithCoder:]
+-[SpotzCNCGeoJson toJSON]
+-[SpotzCNCGeoJson coordinates]
+-[SpotzCNCGeoJson setCoordinates:]
+-[SpotzCNCGeoJson type]
+-[SpotzCNCGeoJson setType:]
+-[SpotzCNCGeoJson .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.10
+_OBJC_SELECTOR_REFERENCES_.14
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_NSCoding
+__OBJC_$_PROTOCOL_METHOD_TYPES_NSCoding
+__OBJC_PROTOCOL_$_NSCoding
+__OBJC_LABEL_PROTOCOL_$_NSCoding
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCGeoJson
+__OBJC_METACLASS_RO_$_SpotzCNCGeoJson
+__OBJC_$_INSTANCE_METHODS_SpotzCNCGeoJson
+_OBJC_IVAR_$_SpotzCNCGeoJson._coordinates
+_OBJC_IVAR_$_SpotzCNCGeoJson._type
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCGeoJson
+__OBJC_$_PROP_LIST_SpotzCNCGeoJson
+__OBJC_CLASS_RO_$_SpotzCNCGeoJson
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCGeoJson.m
+SpotzCNCCustomerSDK/Models/SpotzCNCGeoJson.m
+SpotzCNCCustomerSDK/Models/SpotzCNCGeoJson.h
+-[SpotzCNCCustomer initWithData:username:]
+-[SpotzCNCCustomer encodeWithCoder:]
+-[SpotzCNCCustomer initWithCoder:]
+-[SpotzCNCCustomer customerId]
+-[SpotzCNCCustomer setCustomerId:]
+-[SpotzCNCCustomer title]
+-[SpotzCNCCustomer setTitle:]
+-[SpotzCNCCustomer firstName]
+-[SpotzCNCCustomer setFirstName:]
+-[SpotzCNCCustomer lastName]
+-[SpotzCNCCustomer setLastName:]
+-[SpotzCNCCustomer username]
+-[SpotzCNCCustomer setUsername:]
+-[SpotzCNCCustomer isVerified]
+-[SpotzCNCCustomer setIsVerified:]
+-[SpotzCNCCustomer .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.24
+_OBJC_SELECTOR_REFERENCES_.44
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCCustomer
+__OBJC_METACLASS_RO_$_SpotzCNCCustomer
+__OBJC_$_INSTANCE_METHODS_SpotzCNCCustomer
+_OBJC_IVAR_$_SpotzCNCCustomer._isVerified
+_OBJC_IVAR_$_SpotzCNCCustomer._customerId
+_OBJC_IVAR_$_SpotzCNCCustomer._title
+_OBJC_IVAR_$_SpotzCNCCustomer._firstName
+_OBJC_IVAR_$_SpotzCNCCustomer._lastName
+_OBJC_IVAR_$_SpotzCNCCustomer._username
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCCustomer
+__OBJC_$_PROP_LIST_SpotzCNCCustomer
+__OBJC_CLASS_RO_$_SpotzCNCCustomer
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCCustomer.m
+SpotzCNCCustomerSDK/Models/SpotzCNCCustomer.m
+SpotzCNCCustomerSDK/Models/SpotzCNCCustomer.h
++[NSDate(SpotzCNCDate) dateFromUTC:]
++[NSDate(SpotzCNCDate) stringFromUTCDate:]
+_OBJC_CLASSLIST_REFERENCES_$_.1
+_OBJC_SELECTOR_REFERENCES_.3
+_OBJC_CLASSLIST_REFERENCES_$_.8
+__OBJC_$_CATEGORY_CLASS_METHODS_NSDate_$_SpotzCNCDate
+__OBJC_$_CATEGORY_NSDate_$_SpotzCNCDate
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Tools/NSDate+SpotzCNCDate.m
+SpotzCNCCustomerSDK/Tools/NSDate+SpotzCNCDate.m
+-[SpotzCNCLocationStore initWithData:]
+-[SpotzCNCLocationStore latitude]
+-[SpotzCNCLocationStore longitude]
+-[SpotzCNCLocationStore updateLocation]
+-[SpotzCNCLocationStore defaultPickupLocationName]
+-[SpotzCNCLocationStore encodeWithCoder:]
+-[SpotzCNCLocationStore initWithCoder:]
+-[SpotzCNCLocationStore locationId]
+-[SpotzCNCLocationStore setLocationId:]
+-[SpotzCNCLocationStore name]
+-[SpotzCNCLocationStore setName:]
+-[SpotzCNCLocationStore defaultPickupId]
+-[SpotzCNCLocationStore setDefaultPickupId:]
+-[SpotzCNCLocationStore workingHours]
+-[SpotzCNCLocationStore setWorkingHours:]
+-[SpotzCNCLocationStore branchId]
+-[SpotzCNCLocationStore setBranchId:]
+-[SpotzCNCLocationStore siteId]
+-[SpotzCNCLocationStore setSiteId:]
+-[SpotzCNCLocationStore address]
+-[SpotzCNCLocationStore setAddress:]
+-[SpotzCNCLocationStore phone]
+-[SpotzCNCLocationStore setPhone:]
+-[SpotzCNCLocationStore locationPickups]
+-[SpotzCNCLocationStore setLocationPickups:]
+-[SpotzCNCLocationStore timezone]
+-[SpotzCNCLocationStore setTimezone:]
+-[SpotzCNCLocationStore serviceAvailable]
+-[SpotzCNCLocationStore setServiceAvailable:]
+-[SpotzCNCLocationStore storeOpen]
+-[SpotzCNCLocationStore setStoreOpen:]
+-[SpotzCNCLocationStore setLatitude:]
+-[SpotzCNCLocationStore setLongitude:]
+-[SpotzCNCLocationStore .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.47
+_OBJC_SELECTOR_REFERENCES_.63
+_OBJC_CLASSLIST_REFERENCES_$_.64
+_OBJC_CLASSLIST_REFERENCES_$_.67
+_OBJC_SELECTOR_REFERENCES_.69
+_OBJC_SELECTOR_REFERENCES_.71
+_OBJC_SELECTOR_REFERENCES_.73
+_OBJC_SELECTOR_REFERENCES_.75
+_OBJC_SELECTOR_REFERENCES_.77
+_OBJC_SELECTOR_REFERENCES_.79
+_OBJC_SELECTOR_REFERENCES_.81
+_OBJC_SELECTOR_REFERENCES_.83
+_OBJC_SELECTOR_REFERENCES_.85
+_OBJC_SELECTOR_REFERENCES_.87
+_OBJC_SELECTOR_REFERENCES_.89
+_OBJC_SELECTOR_REFERENCES_.97
+_OBJC_SELECTOR_REFERENCES_.101
+_OBJC_SELECTOR_REFERENCES_.105
+_OBJC_SELECTOR_REFERENCES_.107
+_OBJC_SELECTOR_REFERENCES_.109
+_OBJC_SELECTOR_REFERENCES_.111
+_OBJC_SELECTOR_REFERENCES_.115
+_OBJC_SELECTOR_REFERENCES_.117
+_OBJC_SELECTOR_REFERENCES_.119
+_OBJC_SELECTOR_REFERENCES_.121
+_OBJC_SELECTOR_REFERENCES_.123
+__OBJC_METACLASS_RO_$_SpotzCNCLocationStore
+__OBJC_$_INSTANCE_METHODS_SpotzCNCLocationStore
+_OBJC_IVAR_$_SpotzCNCLocationStore._serviceAvailable
+_OBJC_IVAR_$_SpotzCNCLocationStore._storeOpen
+_OBJC_IVAR_$_SpotzCNCLocationStore._locationId
+_OBJC_IVAR_$_SpotzCNCLocationStore._name
+_OBJC_IVAR_$_SpotzCNCLocationStore._defaultPickupId
+_OBJC_IVAR_$_SpotzCNCLocationStore._workingHours
+_OBJC_IVAR_$_SpotzCNCLocationStore._branchId
+_OBJC_IVAR_$_SpotzCNCLocationStore._siteId
+_OBJC_IVAR_$_SpotzCNCLocationStore._address
+_OBJC_IVAR_$_SpotzCNCLocationStore._phone
+_OBJC_IVAR_$_SpotzCNCLocationStore._locationPickups
+_OBJC_IVAR_$_SpotzCNCLocationStore._timezone
+_OBJC_IVAR_$_SpotzCNCLocationStore._latitude
+_OBJC_IVAR_$_SpotzCNCLocationStore._longitude
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCLocationStore
+__OBJC_$_PROP_LIST_SpotzCNCLocationStore
+__OBJC_CLASS_RO_$_SpotzCNCLocationStore
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCLocationStore.m
+SpotzCNCCustomerSDK/Models/SpotzCNCLocationStore.m
+SpotzCNCCustomerSDK/Models/SpotzCNCLocationStore.h
+-[SpotzCNCOrderAddress initWithData:]
+-[SpotzCNCOrderAddress encodeWithCoder:]
+-[SpotzCNCOrderAddress initWithCoder:]
+-[SpotzCNCOrderAddress toJSON]
+-[SpotzCNCOrderAddress isEmpty]
+-[SpotzCNCOrderAddress country]
+-[SpotzCNCOrderAddress setCountry:]
+-[SpotzCNCOrderAddress region]
+-[SpotzCNCOrderAddress setRegion:]
+-[SpotzCNCOrderAddress postcode]
+-[SpotzCNCOrderAddress setPostcode:]
+-[SpotzCNCOrderAddress locality]
+-[SpotzCNCOrderAddress setLocality:]
+-[SpotzCNCOrderAddress streetAddress]
+-[SpotzCNCOrderAddress setStreetAddress:]
+-[SpotzCNCOrderAddress subStreetAddress]
+-[SpotzCNCOrderAddress setSubStreetAddress:]
+-[SpotzCNCOrderAddress latitude]
+-[SpotzCNCOrderAddress setLatitude:]
+-[SpotzCNCOrderAddress longitude]
+-[SpotzCNCOrderAddress setLongitude:]
+-[SpotzCNCOrderAddress geoJson]
+-[SpotzCNCOrderAddress setGeoJson:]
+-[SpotzCNCOrderAddress .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.41
+_OBJC_SELECTOR_REFERENCES_.57
+_OBJC_CLASSLIST_REFERENCES_$_.74
+_OBJC_SELECTOR_REFERENCES_.76
+_OBJC_SELECTOR_REFERENCES_.78
+_OBJC_SELECTOR_REFERENCES_.80
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCOrderAddress
+__OBJC_METACLASS_RO_$_SpotzCNCOrderAddress
+__OBJC_$_INSTANCE_METHODS_SpotzCNCOrderAddress
+_OBJC_IVAR_$_SpotzCNCOrderAddress._country
+_OBJC_IVAR_$_SpotzCNCOrderAddress._region
+_OBJC_IVAR_$_SpotzCNCOrderAddress._postcode
+_OBJC_IVAR_$_SpotzCNCOrderAddress._locality
+_OBJC_IVAR_$_SpotzCNCOrderAddress._streetAddress
+_OBJC_IVAR_$_SpotzCNCOrderAddress._subStreetAddress
+_OBJC_IVAR_$_SpotzCNCOrderAddress._latitude
+_OBJC_IVAR_$_SpotzCNCOrderAddress._longitude
+_OBJC_IVAR_$_SpotzCNCOrderAddress._geoJson
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCOrderAddress
+__OBJC_$_PROP_LIST_SpotzCNCOrderAddress
+__OBJC_CLASS_RO_$_SpotzCNCOrderAddress
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCOrderAddress.m
+SpotzCNCCustomerSDK/Models/SpotzCNCOrderAddress.m
+SpotzCNCCustomerSDK/Models/SpotzCNCOrderAddress.h
+-[SpotzCNCNotification initWithRequestId:]
+-[SpotzCNCNotification initWithRequestId:title:body:]
+-[SpotzCNCNotification requestIdentifier]
+-[SpotzCNCNotification setRequestIdentifier:]
+-[SpotzCNCNotification title]
+-[SpotzCNCNotification setTitle:]
+-[SpotzCNCNotification body]
+-[SpotzCNCNotification setBody:]
+-[SpotzCNCNotification userInfo]
+-[SpotzCNCNotification setUserInfo:]
+-[SpotzCNCNotification actionIdentifier]
+-[SpotzCNCNotification setActionIdentifier:]
+-[SpotzCNCNotification categoryIdentifier]
+-[SpotzCNCNotification setCategoryIdentifier:]
+-[SpotzCNCNotification .cxx_destruct]
+__OBJC_METACLASS_RO_$_SpotzCNCNotification
+__OBJC_$_INSTANCE_METHODS_SpotzCNCNotification
+_OBJC_IVAR_$_SpotzCNCNotification._requestIdentifier
+_OBJC_IVAR_$_SpotzCNCNotification._title
+_OBJC_IVAR_$_SpotzCNCNotification._body
+_OBJC_IVAR_$_SpotzCNCNotification._userInfo
+_OBJC_IVAR_$_SpotzCNCNotification._actionIdentifier
+_OBJC_IVAR_$_SpotzCNCNotification._categoryIdentifier
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCNotification
+__OBJC_$_PROP_LIST_SpotzCNCNotification
+__OBJC_CLASS_RO_$_SpotzCNCNotification
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCNotification.m
+SpotzCNCCustomerSDK/Models/SpotzCNCNotification.m
+SpotzCNCCustomerSDK/Models/SpotzCNCNotification.h
++[SpotzCNCError errorWithCode:userInfo:]
++[SpotzCNCError errorWithResponse:data:]
++[SpotzCNCError invalidResponseFromServer]
++[SpotzCNCError notFound]
+_OBJC_CLASSLIST_REFERENCES_$_.5
+__OBJC_$_CLASS_METHODS_SpotzCNCError
+__OBJC_METACLASS_RO_$_SpotzCNCError
+__OBJC_CLASS_RO_$_SpotzCNCError
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Networking/SpotzCNCError.m
+SpotzCNCCustomerSDK/Networking/SpotzCNCError.m
++[SpotzCNCNetworking shared]
+___28+[SpotzCNCNetworking shared]_block_invoke
+___28+[SpotzCNCNetworking shared]_block_invoke_2
+-[SpotzCNCNetworking initWithProjectId:cncProjectKey:]
+-[SpotzCNCNetworking reinitNetworking]
+-[SpotzCNCNetworking setupForProjectId:cncProjectKey:]
+-[SpotzCNCNetworking handleForTask:error:]
+-[SpotzCNCNetworking logoutCustomerId:success:failure:]
+___55-[SpotzCNCNetworking logoutCustomerId:success:failure:]_block_invoke
+___copy_helper_block_e8_32b
+___55-[SpotzCNCNetworking logoutCustomerId:success:failure:]_block_invoke.39
+___copy_helper_block_e8_32s40b
+___destroy_helper_block_e8_32s40s
+-[SpotzCNCNetworking loginCustomerWithUsername:password:success:failure:]
+___73-[SpotzCNCNetworking loginCustomerWithUsername:password:success:failure:]_block_invoke
+___73-[SpotzCNCNetworking loginCustomerWithUsername:password:success:failure:]_block_invoke.69
+-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]
+___92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke
+___92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke_2
+___92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke_3
+___92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke.91
+___copy_helper_block_e8_32s40s48b
+___destroy_helper_block_e8_32s40s48s
+___copy_helper_block_e8_32s40s48s56b64b
+___destroy_helper_block_e8_32s40s48s56s64s
+-[SpotzCNCNetworking registerCustomerWithEmail:otherParameters:success:failure:]
+___80-[SpotzCNCNetworking registerCustomerWithEmail:otherParameters:success:failure:]_block_invoke
+___80-[SpotzCNCNetworking registerCustomerWithEmail:otherParameters:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking getOrders:includeCompleted:success:failure:]
+___65-[SpotzCNCNetworking getOrders:includeCompleted:success:failure:]_block_invoke
+___65-[SpotzCNCNetworking getOrders:includeCompleted:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking getCustomerOrders:includeCompleted:success:failure:]
+-[SpotzCNCNetworking getCustomerNonCompletedOrders:success:failure:]
+-[SpotzCNCNetworking checkinOneOrder:pickupId:success:failure:]
+___63-[SpotzCNCNetworking checkinOneOrder:pickupId:success:failure:]_block_invoke
+___63-[SpotzCNCNetworking checkinOneOrder:pickupId:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking checkinOrder:pickupId:success:failure:]
+___60-[SpotzCNCNetworking checkinOrder:pickupId:success:failure:]_block_invoke
+___60-[SpotzCNCNetworking checkinOrder:pickupId:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking updateOrderAttribute:forCustomerId:andLocationId:success:failure:]
+___87-[SpotzCNCNetworking updateOrderAttribute:forCustomerId:andLocationId:success:failure:]_block_invoke
+___87-[SpotzCNCNetworking updateOrderAttribute:forCustomerId:andLocationId:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking recordActivityForCustomerId:atSiteId:attributes:event:success:failure:]
+___92-[SpotzCNCNetworking recordActivityForCustomerId:atSiteId:attributes:event:success:failure:]_block_invoke
+___92-[SpotzCNCNetworking recordActivityForCustomerId:atSiteId:attributes:event:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking giveFeedback:order:success:failure:]
+___57-[SpotzCNCNetworking giveFeedback:order:success:failure:]_block_invoke
+___57-[SpotzCNCNetworking giveFeedback:order:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking createOrder:branchId:customerId:success:failure:]
+___70-[SpotzCNCNetworking createOrder:branchId:customerId:success:failure:]_block_invoke
+___70-[SpotzCNCNetworking createOrder:branchId:customerId:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking deleteOrder:customerId:success:failure:]
+___61-[SpotzCNCNetworking deleteOrder:customerId:success:failure:]_block_invoke
+___61-[SpotzCNCNetworking deleteOrder:customerId:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking addCommentsToOrder:orderStatus:customerId:comments:success:failure:]
+___89-[SpotzCNCNetworking addCommentsToOrder:orderStatus:customerId:comments:success:failure:]_block_invoke
+___89-[SpotzCNCNetworking addCommentsToOrder:orderStatus:customerId:comments:success:failure:]_block_invoke_2
+-[SpotzCNCNetworking additionalHeader]
+-[SpotzCNCNetworking networkConnectionChanged:]
+___47-[SpotzCNCNetworking networkConnectionChanged:]_block_invoke
+-[SpotzCNCNetworking sessionManager]
+-[SpotzCNCNetworking setSessionManager:]
+-[SpotzCNCNetworking projectId]
+-[SpotzCNCNetworking setProjectId:]
+-[SpotzCNCNetworking lastLoginAttempted]
+-[SpotzCNCNetworking setLastLoginAttempted:]
+-[SpotzCNCNetworking .cxx_destruct]
+___block_descriptor_40_e8__e25_"SpotzCNCNetworking"8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.26
+_OBJC_CLASSLIST_REFERENCES_$_.31
+___block_descriptor_40_e8_32bs_e33_v24?0"NSURLSessionDataTask"816l
+___block_descriptor_48_e8_32s40bs_e42_v24?0"NSURLSessionDataTask"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.48
+_OBJC_CLASSLIST_REFERENCES_$_.49
+_OBJC_CLASSLIST_REFERENCES_$_.52
+_OBJC_CLASSLIST_REFERENCES_$_.66
+_OBJC_SELECTOR_REFERENCES_.68
+___block_descriptor_48_e8_32s40bs_e33_v24?0"NSURLSessionDataTask"816l
+___block_descriptor_40_e8_32bs_e26_v16?0"SpotzCNCCustomer"8l
+___block_descriptor_56_e8_32s40s48bs_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.94
+___block_descriptor_72_e8_32s40s48s56bs64bs_e42_v24?0"NSURLSessionDataTask"8"NSError"16l
+_OBJC_CLASSLIST_REFERENCES_$_.103
+_OBJC_CLASSLIST_REFERENCES_$_.108
+_OBJC_SELECTOR_REFERENCES_.110
+_OBJC_SELECTOR_REFERENCES_.112
+_OBJC_SELECTOR_REFERENCES_.114
+_OBJC_SELECTOR_REFERENCES_.116
+_OBJC_SELECTOR_REFERENCES_.128
+_OBJC_CLASSLIST_REFERENCES_$_.129
+_OBJC_SELECTOR_REFERENCES_.131
+_OBJC_SELECTOR_REFERENCES_.141
+_OBJC_SELECTOR_REFERENCES_.155
+_OBJC_SELECTOR_REFERENCES_.165
+_OBJC_SELECTOR_REFERENCES_.167
+_OBJC_SELECTOR_REFERENCES_.171
+_OBJC_SELECTOR_REFERENCES_.175
+_OBJC_SELECTOR_REFERENCES_.179
+_OBJC_SELECTOR_REFERENCES_.183
+_OBJC_SELECTOR_REFERENCES_.187
+_OBJC_SELECTOR_REFERENCES_.191
+_OBJC_SELECTOR_REFERENCES_.193
+_OBJC_SELECTOR_REFERENCES_.197
+_OBJC_SELECTOR_REFERENCES_.201
+_OBJC_SELECTOR_REFERENCES_.203
+_OBJC_SELECTOR_REFERENCES_.205
+_OBJC_SELECTOR_REFERENCES_.215
+_OBJC_CLASSLIST_REFERENCES_$_.220
+_OBJC_SELECTOR_REFERENCES_.222
+_OBJC_CLASSLIST_REFERENCES_$_.225
+_OBJC_SELECTOR_REFERENCES_.227
+_OBJC_SELECTOR_REFERENCES_.231
+_OBJC_SELECTOR_REFERENCES_.233
+___block_descriptor_33_e5_v8?0l
+__OBJC_$_CLASS_METHODS_SpotzCNCNetworking
+__OBJC_$_PROTOCOL_REFS_SpotzHttpSessionManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SpotzHttpSessionManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_SpotzHttpSessionManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SpotzHttpSessionManagerDelegate
+__OBJC_PROTOCOL_$_SpotzHttpSessionManagerDelegate
+__OBJC_LABEL_PROTOCOL_$_SpotzHttpSessionManagerDelegate
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCNetworking
+__OBJC_METACLASS_RO_$_SpotzCNCNetworking
+__OBJC_$_INSTANCE_METHODS_SpotzCNCNetworking
+_OBJC_IVAR_$_SpotzCNCNetworking._sessionManager
+_OBJC_IVAR_$_SpotzCNCNetworking._projectId
+_OBJC_IVAR_$_SpotzCNCNetworking._lastLoginAttempted
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCNetworking
+__OBJC_$_PROP_LIST_SpotzCNCNetworking
+__OBJC_CLASS_RO_$_SpotzCNCNetworking
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Networking/SpotzCNCNetworking.m
+SpotzCNCCustomerSDK/Networking/SpotzCNCNetworking.m
+__47-[SpotzCNCNetworking networkConnectionChanged:]_block_invoke
+__89-[SpotzCNCNetworking addCommentsToOrder:orderStatus:customerId:comments:success:failure:]_block_invoke_2
+__89-[SpotzCNCNetworking addCommentsToOrder:orderStatus:customerId:comments:success:failure:]_block_invoke
+__61-[SpotzCNCNetworking deleteOrder:customerId:success:failure:]_block_invoke_2
+__61-[SpotzCNCNetworking deleteOrder:customerId:success:failure:]_block_invoke
+__70-[SpotzCNCNetworking createOrder:branchId:customerId:success:failure:]_block_invoke_2
+__70-[SpotzCNCNetworking createOrder:branchId:customerId:success:failure:]_block_invoke
+__57-[SpotzCNCNetworking giveFeedback:order:success:failure:]_block_invoke_2
+__57-[SpotzCNCNetworking giveFeedback:order:success:failure:]_block_invoke
+__92-[SpotzCNCNetworking recordActivityForCustomerId:atSiteId:attributes:event:success:failure:]_block_invoke_2
+__92-[SpotzCNCNetworking recordActivityForCustomerId:atSiteId:attributes:event:success:failure:]_block_invoke
+__87-[SpotzCNCNetworking updateOrderAttribute:forCustomerId:andLocationId:success:failure:]_block_invoke_2
+__87-[SpotzCNCNetworking updateOrderAttribute:forCustomerId:andLocationId:success:failure:]_block_invoke
+__60-[SpotzCNCNetworking checkinOrder:pickupId:success:failure:]_block_invoke_2
+__60-[SpotzCNCNetworking checkinOrder:pickupId:success:failure:]_block_invoke
+__63-[SpotzCNCNetworking checkinOneOrder:pickupId:success:failure:]_block_invoke_2
+__63-[SpotzCNCNetworking checkinOneOrder:pickupId:success:failure:]_block_invoke
+__65-[SpotzCNCNetworking getOrders:includeCompleted:success:failure:]_block_invoke_2
+__65-[SpotzCNCNetworking getOrders:includeCompleted:success:failure:]_block_invoke
+__80-[SpotzCNCNetworking registerCustomerWithEmail:otherParameters:success:failure:]_block_invoke_2
+__80-[SpotzCNCNetworking registerCustomerWithEmail:otherParameters:success:failure:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56s64s
+__copy_helper_block_e8_32s40s48s56b64b
+__destroy_helper_block_e8_32s40s48s
+__copy_helper_block_e8_32s40s48b
+__92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke.91
+__92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke_3
+__92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke_2
+__92-[SpotzCNCNetworking registerCustomerWithUsername:password:otherParameters:success:failure:]_block_invoke
+__73-[SpotzCNCNetworking loginCustomerWithUsername:password:success:failure:]_block_invoke.69
+__73-[SpotzCNCNetworking loginCustomerWithUsername:password:success:failure:]_block_invoke
+__destroy_helper_block_e8_32s40s
+__copy_helper_block_e8_32s40b
+__55-[SpotzCNCNetworking logoutCustomerId:success:failure:]_block_invoke.39
+__copy_helper_block_e8_32b
+__55-[SpotzCNCNetworking logoutCustomerId:success:failure:]_block_invoke
+__28+[SpotzCNCNetworking shared]_block_invoke_2
+__28+[SpotzCNCNetworking shared]_block_invoke
++[SpotzPushSDKManager shared]
+___29+[SpotzPushSDKManager shared]_block_invoke
+-[SpotzPushSDKManager setupWithProjectId:projectKey:delegate:config:]
+-[SpotzPushSDKManager startSpotzPush]
+-[SpotzPushSDKManager appRegisteredForRemoteNotificationsWithDeviceToken:]
+-[SpotzPushSDKManager appFailedToRegisterForRemoteNotificationsWithError:]
+-[SpotzPushSDKManager appReceivedRemoteNotification:applicationState:fetchCompletionHandler:]
+-[SpotzPushSDKManager setupPushOptionsWithActionTitles:]
+-[SpotzPushSDKManager setupPushOptionsWithLaterText:nowText:]
+-[SpotzPushSDKManager delegate]
+-[SpotzPushSDKManager setDelegate:]
+-[SpotzPushSDKManager categories]
+-[SpotzPushSDKManager setCategories:]
+-[SpotzPushSDKManager authorizationOptions]
+-[SpotzPushSDKManager setAuthorizationOptions:]
+-[SpotzPushSDKManager .cxx_destruct]
+_shared.spotzPushSDKManager
+_OBJC_CLASSLIST_REFERENCES_$_.29
+_OBJC_SELECTOR_REFERENCES_.31
+_OBJC_CLASSLIST_REFERENCES_$_.34
+_OBJC_CLASSLIST_REFERENCES_$_.35
+_OBJC_CLASSLIST_REFERENCES_$_.44
+_OBJC_CLASSLIST_REFERENCES_$_.54
+_OBJC_SELECTOR_REFERENCES_.56
+__OBJC_$_CLASS_METHODS_SpotzPushSDKManager
+__OBJC_METACLASS_RO_$_SpotzPushSDKManager
+__OBJC_$_INSTANCE_METHODS_SpotzPushSDKManager
+_OBJC_IVAR_$_SpotzPushSDKManager._delegate
+_OBJC_IVAR_$_SpotzPushSDKManager._categories
+_OBJC_IVAR_$_SpotzPushSDKManager._authorizationOptions
+__OBJC_$_INSTANCE_VARIABLES_SpotzPushSDKManager
+__OBJC_$_PROP_LIST_SpotzPushSDKManager
+__OBJC_CLASS_RO_$_SpotzPushSDKManager
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/SDKManagers/SpotzPushSDKManager.m
+SpotzCNCCustomerSDK/SDKManagers/SpotzPushSDKManager.m
+llvm.loop.mustprogress
+__29+[SpotzPushSDKManager shared]_block_invoke
+-[SpotzCNCOrder initWithOrderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:]
+-[SpotzCNCOrder initWithOrderNumber:date:domain:deliveryName:address:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:]
+-[SpotzCNCOrder initWithOrderNumber:date:domain:deliveryName:address:status:amount:expectedDeliveryTime:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:]
+-[SpotzCNCOrder initWithOrderNumber:date:domain:deliveryName:address:status:amount:expectedDeliveryTime:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completeDate:failedCompleteDate:]
+-[SpotzCNCOrder initWithData:]
+-[SpotzCNCOrder encodeWithCoder:]
+-[SpotzCNCOrder initWithCoder:]
+-[SpotzCNCOrder isWithinPickupWindow]
+-[SpotzCNCOrder isTimeToNotify]
+-[SpotzCNCOrder orderStatusString]
++[SpotzCNCOrder orderStatusString:]
+-[SpotzCNCOrder isEqual:]
+-[SpotzCNCOrder trackId]
+-[SpotzCNCOrder orderStatus]
+-[SpotzCNCOrder setOrderStatus:]
+-[SpotzCNCOrder deliveryName]
+-[SpotzCNCOrder setDeliveryName:]
+-[SpotzCNCOrder orderAmount]
+-[SpotzCNCOrder setOrderAmount:]
+-[SpotzCNCOrder orderDate]
+-[SpotzCNCOrder setOrderDate:]
+-[SpotzCNCOrder orderNumber]
+-[SpotzCNCOrder setOrderNumber:]
+-[SpotzCNCOrder domain]
+-[SpotzCNCOrder setDomain:]
+-[SpotzCNCOrder pickupStart]
+-[SpotzCNCOrder setPickupStart:]
+-[SpotzCNCOrder pickupEnd]
+-[SpotzCNCOrder setPickupEnd:]
+-[SpotzCNCOrder expectedDeliveryTime]
+-[SpotzCNCOrder setExpectedDeliveryTime:]
+-[SpotzCNCOrder selectedPickupId]
+-[SpotzCNCOrder setSelectedPickupId:]
+-[SpotzCNCOrder totalItems]
+-[SpotzCNCOrder setTotalItems:]
+-[SpotzCNCOrder specific]
+-[SpotzCNCOrder setSpecific:]
+-[SpotzCNCOrder isAllowingCheckinPendingOrders]
+-[SpotzCNCOrder setIsAllowingCheckinPendingOrders:]
+-[SpotzCNCOrder isAllowingAutoCheckinOnSiteEntry]
+-[SpotzCNCOrder setIsAllowingAutoCheckinOnSiteEntry:]
+-[SpotzCNCOrder store]
+-[SpotzCNCOrder setStore:]
+-[SpotzCNCOrder attendant]
+-[SpotzCNCOrder setAttendant:]
+-[SpotzCNCOrder proximityTriggers]
+-[SpotzCNCOrder setProximityTriggers:]
+-[SpotzCNCOrder address]
+-[SpotzCNCOrder setAddress:]
+-[SpotzCNCOrder completedDate]
+-[SpotzCNCOrder setCompletedDate:]
+-[SpotzCNCOrder failedCompletedDate]
+-[SpotzCNCOrder setFailedCompletedDate:]
+-[SpotzCNCOrder .cxx_destruct]
+_OBJC_SELECTOR_REFERENCES_.62
+_OBJC_CLASSLIST_REFERENCES_$_.75
+_OBJC_CLASSLIST_REFERENCES_$_.88
+_OBJC_SELECTOR_REFERENCES_.92
+_OBJC_CLASSLIST_REFERENCES_$_.97
+_OBJC_SELECTOR_REFERENCES_.99
+_OBJC_SELECTOR_REFERENCES_.103
+_OBJC_CLASSLIST_REFERENCES_$_.106
+_OBJC_SELECTOR_REFERENCES_.118
+_OBJC_SELECTOR_REFERENCES_.120
+_OBJC_SELECTOR_REFERENCES_.122
+_OBJC_SELECTOR_REFERENCES_.124
+_OBJC_SELECTOR_REFERENCES_.126
+_OBJC_SELECTOR_REFERENCES_.130
+_OBJC_SELECTOR_REFERENCES_.132
+_OBJC_SELECTOR_REFERENCES_.134
+_OBJC_SELECTOR_REFERENCES_.136
+_OBJC_SELECTOR_REFERENCES_.138
+_OBJC_SELECTOR_REFERENCES_.140
+_OBJC_SELECTOR_REFERENCES_.142
+_OBJC_SELECTOR_REFERENCES_.144
+_OBJC_SELECTOR_REFERENCES_.148
+_OBJC_SELECTOR_REFERENCES_.152
+_OBJC_SELECTOR_REFERENCES_.156
+_OBJC_SELECTOR_REFERENCES_.158
+_OBJC_SELECTOR_REFERENCES_.160
+_OBJC_SELECTOR_REFERENCES_.162
+_OBJC_SELECTOR_REFERENCES_.166
+_OBJC_SELECTOR_REFERENCES_.168
+_OBJC_SELECTOR_REFERENCES_.170
+_OBJC_CLASSLIST_REFERENCES_$_.171
+_OBJC_SELECTOR_REFERENCES_.173
+_OBJC_SELECTOR_REFERENCES_.177
+_OBJC_SELECTOR_REFERENCES_.181
+_OBJC_CLASSLIST_REFERENCES_$_.182
+_OBJC_SELECTOR_REFERENCES_.184
+__OBJC_$_CLASS_METHODS_SpotzCNCOrder
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCOrder
+__OBJC_METACLASS_RO_$_SpotzCNCOrder
+__OBJC_$_INSTANCE_METHODS_SpotzCNCOrder
+_OBJC_IVAR_$_SpotzCNCOrder._isAllowingCheckinPendingOrders
+_OBJC_IVAR_$_SpotzCNCOrder._isAllowingAutoCheckinOnSiteEntry
+_OBJC_IVAR_$_SpotzCNCOrder._orderStatus
+_OBJC_IVAR_$_SpotzCNCOrder._domain
+_OBJC_IVAR_$_SpotzCNCOrder._deliveryName
+_OBJC_IVAR_$_SpotzCNCOrder._orderAmount
+_OBJC_IVAR_$_SpotzCNCOrder._orderDate
+_OBJC_IVAR_$_SpotzCNCOrder._orderNumber
+_OBJC_IVAR_$_SpotzCNCOrder._pickupStart
+_OBJC_IVAR_$_SpotzCNCOrder._pickupEnd
+_OBJC_IVAR_$_SpotzCNCOrder._expectedDeliveryTime
+_OBJC_IVAR_$_SpotzCNCOrder._selectedPickupId
+_OBJC_IVAR_$_SpotzCNCOrder._totalItems
+_OBJC_IVAR_$_SpotzCNCOrder._specific
+_OBJC_IVAR_$_SpotzCNCOrder._store
+_OBJC_IVAR_$_SpotzCNCOrder._attendant
+_OBJC_IVAR_$_SpotzCNCOrder._proximityTriggers
+_OBJC_IVAR_$_SpotzCNCOrder._address
+_OBJC_IVAR_$_SpotzCNCOrder._completedDate
+_OBJC_IVAR_$_SpotzCNCOrder._failedCompletedDate
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCOrder
+__OBJC_$_PROP_LIST_SpotzCNCOrder
+__OBJC_CLASS_RO_$_SpotzCNCOrder
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCOrder.m
+SpotzCNCCustomerSDK/Models/SpotzCNCOrder.m
+SpotzCNCCustomerSDK/Models/SpotzCNCOrder.h
++[SpotzCNCConfiguration shared]
+___31+[SpotzCNCConfiguration shared]_block_invoke
+___31+[SpotzCNCConfiguration shared]_block_invoke_2
++[SpotzCNCConfiguration setProjectId:cncProjectKey:]
+-[SpotzCNCConfiguration configureForEnv:]
+-[SpotzCNCConfiguration projectId]
+-[SpotzCNCConfiguration cncProjectKey]
+-[SpotzCNCConfiguration deviceId]
+-[SpotzCNCConfiguration setLastBgFetch:]
+-[SpotzCNCConfiguration lastBgFetch]
+-[SpotzCNCConfiguration overrideKey:withObject:]
+-[SpotzCNCConfiguration getValue:]
+-[SpotzCNCConfiguration sdkVersion]
+-[SpotzCNCConfiguration isPickupWindowEnabled]
+-[SpotzCNCConfiguration setIsPickupWindowEnabled:]
+-[SpotzCNCConfiguration isServiceAvailableEnabled]
+-[SpotzCNCConfiguration setIsServiceAvailableEnabled:]
+-[SpotzCNCConfiguration dcRegion]
+-[SpotzCNCConfiguration setNotificationTimeoutInSec:]
+-[SpotzCNCConfiguration notificationTimeoutInSec]
+-[SpotzCNCConfiguration isDevEnv]
+-[SpotzCNCConfiguration setIsDevEnv:]
+-[SpotzCNCConfiguration isDebug]
+-[SpotzCNCConfiguration setIsDebug:]
+-[SpotzCNCConfiguration isPDebug]
+-[SpotzCNCConfiguration setIsPDebug:]
+-[SpotzCNCConfiguration showRegisteredRegions]
+-[SpotzCNCConfiguration setShowRegisteredRegions:]
+-[SpotzCNCConfiguration extData]
+-[SpotzCNCConfiguration setExtData:]
+-[SpotzCNCConfiguration regionCode]
+-[SpotzCNCConfiguration setRegionCode:]
+-[SpotzCNCConfiguration enablePickupWindow]
+-[SpotzCNCConfiguration setEnablePickupWindow:]
+-[SpotzCNCConfiguration env]
+-[SpotzCNCConfiguration setEnv:]
+-[SpotzCNCConfiguration version]
+-[SpotzCNCConfiguration setVersion:]
+-[SpotzCNCConfiguration apiKey]
+-[SpotzCNCConfiguration setApiKey:]
+-[SpotzCNCConfiguration host]
+-[SpotzCNCConfiguration setHost:]
+-[SpotzCNCConfiguration overrideEnvironment]
+-[SpotzCNCConfiguration setOverrideEnvironment:]
+-[SpotzCNCConfiguration df]
+-[SpotzCNCConfiguration setDf:]
+-[SpotzCNCConfiguration .cxx_destruct]
+___block_descriptor_40_e8__e28_"SpotzCNCConfiguration"8?0l
+_OBJC_CLASSLIST_REFERENCES_$_.61
+_OBJC_SELECTOR_REFERENCES_.93
+__OBJC_$_CLASS_METHODS_SpotzCNCConfiguration
+__OBJC_METACLASS_RO_$_SpotzCNCConfiguration
+__OBJC_$_INSTANCE_METHODS_SpotzCNCConfiguration
+_OBJC_IVAR_$_SpotzCNCConfiguration._isDevEnv
+_OBJC_IVAR_$_SpotzCNCConfiguration._isDebug
+_OBJC_IVAR_$_SpotzCNCConfiguration._isPDebug
+_OBJC_IVAR_$_SpotzCNCConfiguration._showRegisteredRegions
+_OBJC_IVAR_$_SpotzCNCConfiguration._enablePickupWindow
+_OBJC_IVAR_$_SpotzCNCConfiguration._notificationTimeoutInSec
+_OBJC_IVAR_$_SpotzCNCConfiguration._lastBgFetch
+_OBJC_IVAR_$_SpotzCNCConfiguration._extData
+_OBJC_IVAR_$_SpotzCNCConfiguration._regionCode
+_OBJC_IVAR_$_SpotzCNCConfiguration._env
+_OBJC_IVAR_$_SpotzCNCConfiguration._version
+_OBJC_IVAR_$_SpotzCNCConfiguration._apiKey
+_OBJC_IVAR_$_SpotzCNCConfiguration._host
+_OBJC_IVAR_$_SpotzCNCConfiguration._overrideEnvironment
+_OBJC_IVAR_$_SpotzCNCConfiguration._df
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCConfiguration
+__OBJC_$_PROP_LIST_SpotzCNCConfiguration
+__OBJC_CLASS_RO_$_SpotzCNCConfiguration
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Other/SpotzCNCConfiguration.m
+SpotzCNCCustomerSDK/Other/SpotzCNCConfiguration.m
+SpotzCNCCustomerSDK/Other/SpotzCNCConfiguration.h
+__31+[SpotzCNCConfiguration shared]_block_invoke_2
+__31+[SpotzCNCConfiguration shared]_block_invoke
++[SpotzCNCCustomerSDK shared]
+___29+[SpotzCNCCustomerSDK shared]_block_invoke
++[SpotzCNCCustomerSDK initWithAppId:spotzAppKey:cncAppKey:delegate:dataSource:options:]
++[SpotzCNCCustomerSDK sdkVersion]
+-[SpotzCNCCustomerSDK startSpotzCNC]
+-[SpotzCNCCustomerSDK stopSpotzCNC]
+-[SpotzCNCCustomerSDK canCheckInOrder:]
+-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]
+___76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke
+___76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke_2
+___76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke.151
+___76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke_2.152
+___76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke.156
+___copy_helper_block_e8_32b40s
+-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]
+___88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke
+___88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_2
+___88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_3
+___88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_4
+___88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]
+___69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke
+___69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_2
+___69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_3
+___69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_4
+___69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]
+___57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke
+___57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_2
+___57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke.175
+___57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_2.176
+___57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_3
+-[SpotzCNCCustomerSDK getCustomerNonCompletedOrdersSpotRecheck:completion:]
+-[SpotzCNCCustomerSDK checkLocationAndRetrieveOrdersWithCompletion:]
+-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:completion:]
+-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke_2
+___copy_helper_block_e8_32b40s48s
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.223
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.225
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke_2.226
+___85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.229
+-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]
+___56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke
+___56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke_2
+___56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke.241
+___56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke_2.242
+-[SpotzCNCCustomerSDK checkinOrder:force:completion:]
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_2
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_3
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke.259
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_2.260
+___53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_3.263
+-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]
+___64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke
+___64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_2
+___64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_3
+___64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_4
+___64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]
+___118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke
+___118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_2
+___118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_3
+___118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_4
+___118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK createOrder:branchId:completion:]
+___55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke
+___55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_2
+___55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_3
+___55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke.310
+___55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_2.313
+-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:completion:]
+-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]
+___208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke
+___208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_2
+___208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_3
+___208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_4
+___208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_2
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_3
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_4
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_5
+___52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_6
+-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]
+___74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke
+___74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_2
+___74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_3
+___74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_4
+___74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_5
+-[SpotzCNCCustomerSDK addCommentsToOrder:comments:completion:]
+-[SpotzCNCCustomerSDK verifyCustomer]
+-[SpotzCNCCustomerSDK feedbackRequired:]
+-[SpotzCNCCustomerSDK feedbackRequired]
+-[SpotzCNCCustomerSDK clearFeedback]
+-[SpotzCNCCustomerSDK isTimeToNotifyForOrder:]
+-[SpotzCNCCustomerSDK canTerminateBgTask]
+-[SpotzCNCCustomerSDK setupListeners]
+-[SpotzCNCCustomerSDK removeObservers]
+-[SpotzCNCCustomerSDK applicationDidRegisterForRemoteNotificationsWithDeviceToken:]
+-[SpotzCNCCustomerSDK applicationDidFailToRegisterForRemoteNotificationsWithError:]
+-[SpotzCNCCustomerSDK applicationDidReceiveRemoteNotification:applicationState:fetchCompletionHandler:]
+___103-[SpotzCNCCustomerSDK applicationDidReceiveRemoteNotification:applicationState:fetchCompletionHandler:]_block_invoke
+___copy_helper_block_e8_32s40s48s
+-[SpotzCNCCustomerSDK userNotificationCenterDidReceiveNotificationResponse:withCompletionHandler:]
+-[SpotzCNCCustomerSDK applicationPerformFetchWithCompletionHandler:]
+___68-[SpotzCNCCustomerSDK applicationPerformFetchWithCompletionHandler:]_block_invoke
+-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]
+___74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke
+___74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke_2
+___74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke_3
+___copy_helper_block_e8_32s40s48s56b
+___destroy_helper_block_e8_32s40s48s56s
+-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]
+___73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke
+___73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_2
+___73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_3
+___73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke.448
+___73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_2.449
+-[SpotzCNCCustomerSDK presentLocalNotification:]
+___48-[SpotzCNCCustomerSDK presentLocalNotification:]_block_invoke
+-[SpotzCNCCustomerSDK resetLocalCustomerData]
+-[SpotzCNCCustomerSDK currentCustomer]
+-[SpotzCNCCustomerSDK setCurrentCustomer:]
+-[SpotzCNCCustomerSDK orderWithId:completion:]
+___46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke
+___46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_2
+___46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_3
+___46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_4
+-[SpotzCNCCustomerSDK shouldPresentNotificationForSiteId:]
+-[SpotzCNCCustomerSDK setLastNotificationEntryDateForSiteId:]
+-[SpotzCNCCustomerSDK spotzSDKManagerInitSuccessful]
+-[SpotzCNCCustomerSDK spotzSDKManagerInitFailedWithError:]
+-[SpotzCNCCustomerSDK spotInDetected:]
+-[SpotzCNCCustomerSDK spotOutDetected:]
+-[SpotzCNCCustomerSDK callDelegateForRecordActivityForSpotz:activity:order:]
+___76-[SpotzCNCCustomerSDK callDelegateForRecordActivityForSpotz:activity:order:]_block_invoke
+-[SpotzCNCCustomerSDK spotzSDKManagerBluetoothStateChanged:]
+-[SpotzCNCCustomerSDK spotzSDKManagerLocationStateChanged:isKnown:]
+-[SpotzCNCCustomerSDK spotzPushSDKManagerInitSuccessful:]
+-[SpotzCNCCustomerSDK isInsideSpotAtSiteId:]
+-[SpotzCNCCustomerSDK checkLocationServicesStatus]
+___50-[SpotzCNCCustomerSDK checkLocationServicesStatus]_block_invoke
+___copy_helper_block_e8_32r
+___destroy_helper_block_e8_32r
+-[SpotzCNCCustomerSDK promptLocationServices]
+-[SpotzCNCCustomerSDK startNotificationServices]
+-[SpotzCNCCustomerSDK requestPreciseLocationWitPurposeKey:completion:]
+-[SpotzCNCCustomerSDK isPreciseLocationEnabled]
+-[SpotzCNCCustomerSDK checkAndNotifyCustomerInSpot:]
+___52-[SpotzCNCCustomerSDK checkAndNotifyCustomerInSpot:]_block_invoke
+___copy_helper_block_e8_32s40s
+-[SpotzCNCCustomerSDK notifySiteEntry:]
+-[SpotzCNCCustomerSDK notifyCustomerWithOrder:]
+-[SpotzCNCCustomerSDK findOrdersBySiteId:]
+-[SpotzCNCCustomerSDK delegate]
+-[SpotzCNCCustomerSDK setDelegate:]
+-[SpotzCNCCustomerSDK dataSource]
+-[SpotzCNCCustomerSDK setDataSource:]
+-[SpotzCNCCustomerSDK nonCompletedOrders]
+-[SpotzCNCCustomerSDK setNonCompletedOrders:]
+-[SpotzCNCCustomerSDK lastNotification]
+-[SpotzCNCCustomerSDK setLastNotification:]
+-[SpotzCNCCustomerSDK lastOrderRetrievalDate]
+-[SpotzCNCCustomerSDK setLastOrderRetrievalDate:]
+-[SpotzCNCCustomerSDK taskMgr]
+-[SpotzCNCCustomerSDK setTaskMgr:]
+-[SpotzCNCCustomerSDK numBgRetrievingOrders]
+-[SpotzCNCCustomerSDK setNumBgRetrievingOrders:]
+-[SpotzCNCCustomerSDK isBgCheckinOrder]
+-[SpotzCNCCustomerSDK setIsBgCheckinOrder:]
+-[SpotzCNCCustomerSDK isSpotzCNCStarted]
+-[SpotzCNCCustomerSDK setIsSpotzCNCStarted:]
+-[SpotzCNCCustomerSDK .cxx_destruct]
+_OBJC_CLASSLIST_REFERENCES_$_.27
+_OBJC_SELECTOR_REFERENCES_.52
+_OBJC_SELECTOR_REFERENCES_.60
+_OBJC_SELECTOR_REFERENCES_.64
+_OBJC_SELECTOR_REFERENCES_.66
+_OBJC_SELECTOR_REFERENCES_.70
+_OBJC_SELECTOR_REFERENCES_.72
+_OBJC_CLASSLIST_REFERENCES_$_.73
+_OBJC_CLASSLIST_REFERENCES_$_.76
+_OBJC_CLASSLIST_REFERENCES_$_.79
+_OBJC_SELECTOR_REFERENCES_.90
+_OBJC_CLASSLIST_REFERENCES_$_.91
+_OBJC_SELECTOR_REFERENCES_.127
+_OBJC_SELECTOR_REFERENCES_.135
+_OBJC_SELECTOR_REFERENCES_.139
+_OBJC_SELECTOR_REFERENCES_.145
+_OBJC_SELECTOR_REFERENCES_.149
+___block_descriptor_40_e8_32bs_e5_v8?0l
+___block_descriptor_48_e8_32s40bs_e26_v16?0"SpotzCNCCustomer"8l
+___block_descriptor_40_e8_32bs_e17_v16?0"NSError"8l
+_OBJC_CLASSLIST_REFERENCES_$_.157
+_OBJC_CLASSLIST_REFERENCES_$_.158
+___block_descriptor_48_e8_32bs40s_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.172
+_OBJC_SELECTOR_REFERENCES_.174
+___block_descriptor_48_e8_32s40bs_e5_v8?0l
+_OBJC_SELECTOR_REFERENCES_.178
+_OBJC_SELECTOR_REFERENCES_.180
+_OBJC_SELECTOR_REFERENCES_.182
+_OBJC_CLASSLIST_REFERENCES_$_.183
+_OBJC_SELECTOR_REFERENCES_.185
+_OBJC_SELECTOR_REFERENCES_.189
+_OBJC_CLASSLIST_REFERENCES_$_.194
+_OBJC_SELECTOR_REFERENCES_.198
+_OBJC_SELECTOR_REFERENCES_.200
+_OBJC_SELECTOR_REFERENCES_.202
+_OBJC_SELECTOR_REFERENCES_.204
+_OBJC_SELECTOR_REFERENCES_.206
+_OBJC_SELECTOR_REFERENCES_.208
+_OBJC_SELECTOR_REFERENCES_.210
+_OBJC_SELECTOR_REFERENCES_.214
+_OBJC_SELECTOR_REFERENCES_.216
+_OBJC_SELECTOR_REFERENCES_.218
+_OBJC_SELECTOR_REFERENCES_.220
+___block_descriptor_56_e8_32bs40s48s_e5_v8?0l
+___block_descriptor_49_e8_32s40bs_e17_v16?0"NSArray"8l
+___block_descriptor_48_e8_32bs40s_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.228
+_OBJC_SELECTOR_REFERENCES_.235
+_OBJC_SELECTOR_REFERENCES_.239
+___block_descriptor_48_e8_32bs40s_e18_v16?0"NSNumber"8l
+_OBJC_CLASSLIST_REFERENCES_$_.243
+_OBJC_SELECTOR_REFERENCES_.245
+_OBJC_SELECTOR_REFERENCES_.247
+_OBJC_SELECTOR_REFERENCES_.251
+_OBJC_SELECTOR_REFERENCES_.253
+_OBJC_SELECTOR_REFERENCES_.255
+___block_descriptor_56_e8_32bs40s48s_e29_v24?0"NSArray"8"NSError"16l
+___block_descriptor_48_e8_32s40bs_e18_v16?0"NSNumber"8l
+_OBJC_SELECTOR_REFERENCES_.262
+_OBJC_SELECTOR_REFERENCES_.267
+_OBJC_SELECTOR_REFERENCES_.271
+_OBJC_SELECTOR_REFERENCES_.273
+_OBJC_CLASSLIST_REFERENCES_$_.278
+_OBJC_SELECTOR_REFERENCES_.282
+_OBJC_SELECTOR_REFERENCES_.294
+_OBJC_SELECTOR_REFERENCES_.296
+___block_descriptor_40_e8_32bs_e23_v16?0"SpotzCNCOrder"8l
+_OBJC_SELECTOR_REFERENCES_.312
+_OBJC_SELECTOR_REFERENCES_.315
+_OBJC_CLASSLIST_REFERENCES_$_.318
+_OBJC_SELECTOR_REFERENCES_.320
+_OBJC_SELECTOR_REFERENCES_.326
+_OBJC_SELECTOR_REFERENCES_.334
+_OBJC_SELECTOR_REFERENCES_.336
+_OBJC_SELECTOR_REFERENCES_.338
+_OBJC_SELECTOR_REFERENCES_.340
+_OBJC_SELECTOR_REFERENCES_.342
+_OBJC_SELECTOR_REFERENCES_.344
+_OBJC_SELECTOR_REFERENCES_.346
+_OBJC_SELECTOR_REFERENCES_.348
+_OBJC_CLASSLIST_REFERENCES_$_.349
+_OBJC_SELECTOR_REFERENCES_.351
+_OBJC_SELECTOR_REFERENCES_.353
+_OBJC_SELECTOR_REFERENCES_.355
+_OBJC_SELECTOR_REFERENCES_.357
+_OBJC_SELECTOR_REFERENCES_.359
+_OBJC_SELECTOR_REFERENCES_.361
+_OBJC_SELECTOR_REFERENCES_.363
+_OBJC_SELECTOR_REFERENCES_.371
+_OBJC_SELECTOR_REFERENCES_.373
+_OBJC_SELECTOR_REFERENCES_.377
+_OBJC_SELECTOR_REFERENCES_.379
+_OBJC_SELECTOR_REFERENCES_.381
+_OBJC_SELECTOR_REFERENCES_.385
+_OBJC_SELECTOR_REFERENCES_.393
+___block_descriptor_56_e8_32s40s48s_e29_v24?0"NSArray"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.395
+_OBJC_SELECTOR_REFERENCES_.397
+_OBJC_SELECTOR_REFERENCES_.399
+_OBJC_SELECTOR_REFERENCES_.401
+_OBJC_SELECTOR_REFERENCES_.403
+_OBJC_SELECTOR_REFERENCES_.405
+_OBJC_SELECTOR_REFERENCES_.407
+___block_descriptor_40_e8_32bs_e8_v16?0Q8l
+_OBJC_SELECTOR_REFERENCES_.410
+_OBJC_SELECTOR_REFERENCES_.412
+_OBJC_SELECTOR_REFERENCES_.414
+_OBJC_SELECTOR_REFERENCES_.416
+_OBJC_SELECTOR_REFERENCES_.418
+_OBJC_CLASSLIST_REFERENCES_$_.419
+_OBJC_CLASSLIST_REFERENCES_$_.420
+_OBJC_SELECTOR_REFERENCES_.424
+_OBJC_SELECTOR_REFERENCES_.426
+_OBJC_SELECTOR_REFERENCES_.428
+___block_descriptor_64_e8_32s40s48s56bs_e30_v24?0"NSNumber"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.431
+___block_descriptor_56_e8_32s40s48bs_e23_v16?0"SpotzCNCOrder"8l
+_OBJC_SELECTOR_REFERENCES_.433
+_OBJC_SELECTOR_REFERENCES_.437
+_OBJC_SELECTOR_REFERENCES_.439
+_OBJC_SELECTOR_REFERENCES_.443
+_OBJC_SELECTOR_REFERENCES_.445
+_OBJC_SELECTOR_REFERENCES_.447
+___block_descriptor_52_e8_32s40bs_e23_v16?0"SpotzCNCOrder"8l
+_OBJC_CLASSLIST_REFERENCES_$_.450
+_OBJC_CLASSLIST_REFERENCES_$_.451
+_OBJC_SELECTOR_REFERENCES_.453
+_OBJC_SELECTOR_REFERENCES_.455
+_OBJC_SELECTOR_REFERENCES_.457
+_OBJC_SELECTOR_REFERENCES_.459
+_OBJC_SELECTOR_REFERENCES_.461
+_OBJC_SELECTOR_REFERENCES_.463
+_OBJC_SELECTOR_REFERENCES_.465
+_OBJC_SELECTOR_REFERENCES_.467
+_OBJC_SELECTOR_REFERENCES_.469
+_OBJC_CLASSLIST_REFERENCES_$_.470
+_OBJC_SELECTOR_REFERENCES_.472
+_OBJC_SELECTOR_REFERENCES_.474
+_OBJC_CLASSLIST_REFERENCES_$_.475
+_OBJC_SELECTOR_REFERENCES_.477
+___block_descriptor_32_e17_v16?0"NSError"8l
+_OBJC_SELECTOR_REFERENCES_.479
+_OBJC_CLASSLIST_REFERENCES_$_.482
+_OBJC_SELECTOR_REFERENCES_.484
+_OBJC_CLASSLIST_REFERENCES_$_.485
+_OBJC_SELECTOR_REFERENCES_.487
+___block_descriptor_48_e8_32s40bs_e29_v24?0"NSArray"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.489
+_OBJC_SELECTOR_REFERENCES_.491
+_OBJC_SELECTOR_REFERENCES_.493
+_OBJC_SELECTOR_REFERENCES_.495
+_OBJC_SELECTOR_REFERENCES_.497
+_OBJC_SELECTOR_REFERENCES_.501
+_OBJC_SELECTOR_REFERENCES_.503
+_OBJC_SELECTOR_REFERENCES_.505
+_OBJC_SELECTOR_REFERENCES_.507
+_OBJC_SELECTOR_REFERENCES_.509
+_OBJC_SELECTOR_REFERENCES_.513
+_OBJC_SELECTOR_REFERENCES_.515
+_OBJC_SELECTOR_REFERENCES_.519
+_OBJC_SELECTOR_REFERENCES_.521
+_OBJC_SELECTOR_REFERENCES_.523
+___block_literal_global.524
+_OBJC_SELECTOR_REFERENCES_.528
+_OBJC_SELECTOR_REFERENCES_.530
+_OBJC_SELECTOR_REFERENCES_.532
+_OBJC_SELECTOR_REFERENCES_.534
+___block_descriptor_40_e8_32r_e11_v16?0B8i12l
+_OBJC_SELECTOR_REFERENCES_.537
+_OBJC_SELECTOR_REFERENCES_.539
+_OBJC_SELECTOR_REFERENCES_.541
+_OBJC_SELECTOR_REFERENCES_.543
+_OBJC_SELECTOR_REFERENCES_.545
+_OBJC_SELECTOR_REFERENCES_.547
+_OBJC_SELECTOR_REFERENCES_.549
+_OBJC_SELECTOR_REFERENCES_.551
+___block_descriptor_48_e8_32s40s_e29_v24?0"NSArray"8"NSError"16l
+_OBJC_SELECTOR_REFERENCES_.553
+_OBJC_SELECTOR_REFERENCES_.555
+_OBJC_SELECTOR_REFERENCES_.557
+_OBJC_SELECTOR_REFERENCES_.559
+_OBJC_CLASSLIST_REFERENCES_$_.560
+_OBJC_SELECTOR_REFERENCES_.564
+_OBJC_SELECTOR_REFERENCES_.566
+_OBJC_SELECTOR_REFERENCES_.568
+_OBJC_SELECTOR_REFERENCES_.570
+_OBJC_SELECTOR_REFERENCES_.572
+_OBJC_SELECTOR_REFERENCES_.574
+_OBJC_SELECTOR_REFERENCES_.576
+_OBJC_SELECTOR_REFERENCES_.578
+_OBJC_SELECTOR_REFERENCES_.580
+__OBJC_$_CLASS_METHODS_SpotzCNCCustomerSDK
+__OBJC_$_PROTOCOL_REFS_SpotzSDKManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SpotzSDKManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SpotzSDKManagerDelegate
+__OBJC_PROTOCOL_$_SpotzSDKManagerDelegate
+__OBJC_LABEL_PROTOCOL_$_SpotzSDKManagerDelegate
+__OBJC_$_PROTOCOL_REFS_SpotzPushSDKManagerDelegate
+__OBJC_$_PROTOCOL_INSTANCE_METHODS_SpotzPushSDKManagerDelegate
+__OBJC_$_PROTOCOL_METHOD_TYPES_SpotzPushSDKManagerDelegate
+__OBJC_PROTOCOL_$_SpotzPushSDKManagerDelegate
+__OBJC_LABEL_PROTOCOL_$_SpotzPushSDKManagerDelegate
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCCustomerSDK
+__OBJC_METACLASS_RO_$_SpotzCNCCustomerSDK
+__OBJC_$_INSTANCE_METHODS_SpotzCNCCustomerSDK
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._isBgCheckinOrder
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._isSpotzCNCStarted
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._numBgRetrievingOrders
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._delegate
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._dataSource
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._nonCompletedOrders
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._lastNotification
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._lastOrderRetrievalDate
+_OBJC_IVAR_$_SpotzCNCCustomerSDK._taskMgr
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCCustomerSDK
+__OBJC_$_PROP_LIST_SpotzCNCCustomerSDK
+__OBJC_CLASS_RO_$_SpotzCNCCustomerSDK
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.m
+SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.m
+SpotzCNCCustomerSDK/SpotzCNCCustomerSDK.h
+__copy_helper_block_e8_32s40s
+__52-[SpotzCNCCustomerSDK checkAndNotifyCustomerInSpot:]_block_invoke
+__destroy_helper_block_e8_32r
+__copy_helper_block_e8_32r
+__50-[SpotzCNCCustomerSDK checkLocationServicesStatus]_block_invoke
+__76-[SpotzCNCCustomerSDK callDelegateForRecordActivityForSpotz:activity:order:]_block_invoke
+__46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_4
+__46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_3
+__46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke_2
+__46-[SpotzCNCCustomerSDK orderWithId:completion:]_block_invoke
+__48-[SpotzCNCCustomerSDK presentLocalNotification:]_block_invoke
+__73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_2.449
+__73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke.448
+__73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_3
+__73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke_2
+__73-[SpotzCNCCustomerSDK respondToNotificationActionId:userInfo:completion:]_block_invoke
+__destroy_helper_block_e8_32s40s48s56s
+__copy_helper_block_e8_32s40s48s56b
+__74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke_3
+__74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke_2
+__74-[SpotzCNCCustomerSDK checkInOrderInBackgroundWithOrderNumber:completion:]_block_invoke
+__68-[SpotzCNCCustomerSDK applicationPerformFetchWithCompletionHandler:]_block_invoke
+__copy_helper_block_e8_32s40s48s
+__103-[SpotzCNCCustomerSDK applicationDidReceiveRemoteNotification:applicationState:fetchCompletionHandler:]_block_invoke
+__74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_5
+__74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_4
+__74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_3
+__74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke_2
+__74-[SpotzCNCCustomerSDK addCommentsToOrder:orderStatus:comments:completion:]_block_invoke
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_6
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_5
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_4
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_3
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke_2
+__52-[SpotzCNCCustomerSDK deleteOrderNumber:completion:]_block_invoke
+__208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_5
+__208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_4
+__208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_3
+__208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke_2
+__208-[SpotzCNCCustomerSDK createOrderWithBranchId:orderNumber:date:deliveryName:status:amount:pickupStartDate:pickupEndDate:selectedPickupId:totalItems:attributes:allowCheckinPending:allowAutoCheckin:completion:]_block_invoke
+__55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_2.313
+__55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke.310
+__55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_3
+__55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke_2
+__55-[SpotzCNCCustomerSDK createOrder:branchId:completion:]_block_invoke
+__118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_5
+__118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_4
+__118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_3
+__118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke_2
+__118-[SpotzCNCCustomerSDK giveFeedbackComment:responsiveness:friendliness:usefulness:satisfaction:orderNumber:completion:]_block_invoke
+__64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_5
+__64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_4
+__64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_3
+__64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke_2
+__64-[SpotzCNCCustomerSDK updateOrderAttribute:forOrder:completion:]_block_invoke
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_3.263
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_2.260
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke.259
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_3
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke_2
+__53-[SpotzCNCCustomerSDK checkinOrder:force:completion:]_block_invoke
+__56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke_2.242
+__56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke.241
+__56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke_2
+__56-[SpotzCNCCustomerSDK checkinOneOrder:force:completion:]_block_invoke
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.229
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke_2.226
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.225
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke.223
+__copy_helper_block_e8_32b40s48s
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke_2
+__85-[SpotzCNCCustomerSDK retrieveOrdersWithRecheckLocation:includeCompleted:completion:]_block_invoke
+__57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_3
+__57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_2.176
+__57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke.175
+__57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke_2
+__57-[SpotzCNCCustomerSDK logoutCustomerWithSuccess:failure:]_block_invoke
+__69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_5
+__69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_4
+__69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_3
+__69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke_2
+__69-[SpotzCNCCustomerSDK loginCustomerWithUsername:password:completion:]_block_invoke
+__88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_5
+__88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_4
+__88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_3
+__88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke_2
+__88-[SpotzCNCCustomerSDK registerCustomerWithUsername:password:otherParameters:completion:]_block_invoke
+__copy_helper_block_e8_32b40s
+__76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke.156
+__76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke_2.152
+__76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke.151
+__76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke_2
+__76-[SpotzCNCCustomerSDK registerCustomerWithEmail:otherParameters:completion:]_block_invoke
+__29+[SpotzCNCCustomerSDK shared]_block_invoke
+__29+[SpotzCNCCustomerSDK shared]_block_invoke_2
+-[SpotzCNCAttendant initWithData:]
+-[SpotzCNCAttendant encodeWithCoder:]
+-[SpotzCNCAttendant initWithCoder:]
+-[SpotzCNCAttendant firstName]
+-[SpotzCNCAttendant setFirstName:]
+-[SpotzCNCAttendant lastName]
+-[SpotzCNCAttendant setLastName:]
+-[SpotzCNCAttendant avatarUrl]
+-[SpotzCNCAttendant setAvatarUrl:]
+-[SpotzCNCAttendant .cxx_destruct]
+__OBJC_CLASS_PROTOCOLS_$_SpotzCNCAttendant
+__OBJC_METACLASS_RO_$_SpotzCNCAttendant
+__OBJC_$_INSTANCE_METHODS_SpotzCNCAttendant
+_OBJC_IVAR_$_SpotzCNCAttendant._firstName
+_OBJC_IVAR_$_SpotzCNCAttendant._lastName
+_OBJC_IVAR_$_SpotzCNCAttendant._avatarUrl
+__OBJC_$_INSTANCE_VARIABLES_SpotzCNCAttendant
+__OBJC_$_PROP_LIST_SpotzCNCAttendant
+__OBJC_CLASS_RO_$_SpotzCNCAttendant
+/Users/martemas/Dev/SpotzCNCCustomerSDK/SpotzCNCCustomerSDK/Models/SpotzCNCAttendant.m
+SpotzCNCCustomerSDK/Models/SpotzCNCAttendant.m
+SpotzCNCCustomerSDK/Models/SpotzCNCAttendant.h
